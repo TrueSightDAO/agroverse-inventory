@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-14T19:28:38.520Z",
-  "source": "update_store_inventory",
+  "generatedAt": "2026-04-14T19:43:08.000Z",
+  "source": "sync_agroverse_store_inventory",
   "inventory": {
     "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": 0,
     "taste-of-rainforest-caramelized-cacao-beans": 0,
@@ -12,7 +12,7 @@
     "premium-organic-cacao-beans-la-do-sitio": 0,
     "ceremonial-cacao-fazenda-santa-ana-2023-200g": 12,
     "oscar-bahia-cacao-tea-1lb": 0,
-    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": 0,
-    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": 0
+    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": 23,
+    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": 20
   }
 }
