@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-15T22:30:00.000Z",
+  "generatedAt": "2026-04-19T21:32:46.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "edge-and-node-house-of-web3": {
@@ -198,9 +198,9 @@
         },
         {
           "productId": "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023",
-          "inventory": 20,
-          "venueInventory": 20,
-          "onlineInventory": 20,
+          "inventory": 18,
+          "venueInventory": 18,
+          "onlineInventory": 18,
           "availableOnline": true,
           "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Fazenda Santa Ana, Bahia Brazil, 2023",
           "priceUsd": "10",
@@ -211,9 +211,9 @@
         },
         {
           "productId": "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024",
-          "inventory": 23,
-          "venueInventory": 23,
-          "onlineInventory": 23,
+          "inventory": 21,
+          "venueInventory": 21,
+          "onlineInventory": 21,
           "availableOnline": true,
           "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Oscar's Farm, Bahia Brazil, 2024",
           "priceUsd": "10",
