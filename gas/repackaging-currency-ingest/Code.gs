@@ -103,6 +103,75 @@ function doGet(e) {
   });
 }
 
+/**
+ * One-time: install a header row on "Currency Creation". Safe to run repeatedly —
+ * if row 1 is already populated the function leaves it alone unless `force=true`.
+ * Columns match what processBatchData_ writes via appendRow_ (Code.gs:~275):
+ *   A created_at_utc | B request_id | C suggested_currency | D unit_cost_usd
+ *   E holder | F per_output_json
+ */
+function installCurrencyCreationHeader() {
+  return _installCurrencyCreationHeader_(false);
+}
+function installCurrencyCreationHeaderForce() {
+  return _installCurrencyCreationHeader_(true);
+}
+function _installCurrencyCreationHeader_(force) {
+  var opsId = getProp_(SCRIPT_PROP_OPS_SS, DEFAULT_OPS_SPREADSHEET_ID);
+  var shCcName = getProp_(SCRIPT_PROP_SHEET_CC, DEFAULT_SHEET_CC);
+  var opsSs = SpreadsheetApp.openById(opsId);
+  var sh = opsSs.getSheetByName(shCcName);
+  if (!sh) throw new Error('Missing sheet: ' + shCcName);
+
+  var headers = [
+    'created_at_utc',
+    'request_id',
+    'suggested_currency',
+    'unit_cost_usd',
+    'holder',
+    'per_output_json',
+  ];
+
+  var firstRow = sh.getRange(1, 1, 1, headers.length).getValues()[0];
+  var hasExistingHeader = firstRow.some(function (v) { return String(v || '').trim() !== ''; });
+
+  if (hasExistingHeader && !force) {
+    Logger.log('Row 1 already has content; leaving it alone. Use installCurrencyCreationHeaderForce to overwrite.');
+    return { ok: true, changed: false, existing: firstRow };
+  }
+
+  // If there's data starting at row 1 (no header), insert a blank row above first so we don't clobber data.
+  var needsInsertAbove = false;
+  if (!hasExistingHeader) {
+    // row 1 is empty — just write headers into row 1
+  } else {
+    // force=true and row 1 has content: insert a new row above and write headers there
+    needsInsertAbove = true;
+  }
+
+  if (needsInsertAbove) {
+    sh.insertRowBefore(1);
+  }
+
+  sh.getRange(1, 1, 1, headers.length).setValues([headers]).setFontWeight('bold');
+  sh.setFrozenRows(1);
+
+  return { ok: true, changed: true, headers: headers, force: !!force };
+}
+
+/**
+ * Public wrapper so the scan can be run directly from the Apps Script editor
+ * dropdown (private `_`-suffixed functions don't appear there).
+ * Returns the same JSON response shape as the doGet path.
+ */
+function runScanRepackagingBatches() {
+  var res = processRepackagingBatchesFromTelegramChatLogs_();
+  try {
+    Logger.log(res.getContent());
+  } catch (ignore) {}
+  return res;
+}
+
 /** One-time: run this in the editor to authorize UrlFetch + Spreadsheets. */
 function authorizeUrlFetchForRepackagingIngest() {
   UrlFetchApp.fetch('https://www.google.com', { muteHttpExceptions: true });
