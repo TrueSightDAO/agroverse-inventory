@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "request_id": "67c88267-b41c-4eab-8ef5-d5be48854d65",
+  "generated_at": "2026-04-19T20:37:22.126Z",
+  "source": "repackaging_currency_ingest",
+  "event": "repackaging_batch_creation",
+  "holder": {
+    "key": null,
+    "label": null
+  },
+  "inputs": [
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "[AGL13] Cacao Almonds KG from Vivi's farm - AGL13",
+      "quantity": 1,
+      "unit_cost_usd": 7.8,
+      "extended_cost_usd": 7.8
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Ceremonial Cacao Kraft Pouch - 20250219006",
+      "quantity": 5,
+      "unit_cost_usd": 0.6754468485418627,
+      "extended_cost_usd": 3.377234242709313
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Cacao Almonds Vivi - AGL13 | Ceremonial Cacao Kraft Pouch - 20250219006",
+      "suggested_currency": "Cacao Almonds Vivi - AGL13 | Ceremonial Cacao Kraft Pouch - 20250219006 | 20260418",
+      "units": 5,
+      "unit_kind": "each",
+      "unit_custom": null,
+      "weight_per_unit_grams": 200,
+      "weight_display": {
+        "amount": 200,
+        "unit": "g"
+      },
+      "total_weight_grams": 1000,
+      "unit_cost_usd": 2.2354468485418626,
+      "line_total_usd": 11.177234242709313
+    }
+  ],
+  "totals": {
+    "inputs_subtotal_usd": 11.177234242709313,
+    "grand_total_usd": 11.177234242709313,
+    "total_output_weight_grams": 1000,
+    "cost_per_gram_usd": 0.011177234242709312
+  },
+  "raw_request_text": null,
+  "client": {
+    "client_generated_at": "2026-04-19T04:41:11.146Z"
+  }
+}
