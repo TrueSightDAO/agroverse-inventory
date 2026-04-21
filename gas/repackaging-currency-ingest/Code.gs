@@ -208,6 +208,9 @@ function doPost(e) {
     appendRow_(opsSs, shLogsName, [new Date().toISOString(), 'repackaging_planner', event, JSON.stringify(sanitized)]);
 
     var result = processBatchData_(data);
+    if (result && result.ok) {
+      notifyTreasuryCachePublisher_('repackaging_ingest');
+    }
     return jsonResponse_(result);
   } catch (err) {
     return jsonResponse_({ ok: false, error: String(err && err.message ? err.message : err) });
@@ -286,6 +289,10 @@ function processRepackagingBatchesFromTelegramChatLogs_() {
       }
     }
 
+    if (processed > 0) {
+      notifyTreasuryCachePublisher_('repackaging_ingest');
+    }
+
     return jsonResponse_({
       ok: true,
       action: 'processRepackagingBatchesFromTelegramChatLogs',
@@ -299,6 +306,36 @@ function processRepackagingBatchesFromTelegramChatLogs_() {
     });
   } catch (err) {
     return jsonResponse_({ ok: false, error: String(err && err.message ? err.message : err) });
+  }
+}
+
+/**
+ * Fire-and-forget notification to the treasury-cache-publisher web app so it
+ * rebuilds dao_offchain_treasury.json + SNAPSHOT.md (TrueSightDAO/treasury-cache)
+ * right after Currencies-tab rows land. Safety-net cron on the publisher still
+ * runs every 30 min, so a silent skip here just defers the refresh — it never
+ * loses data. Requires TREASURY_CACHE_PUBLISH_SECRET script property (shared
+ * with publisher project 1u4lVtGaO5Gj…).
+ */
+function notifyTreasuryCachePublisher_(trigger) {
+  try {
+    var secret = PropertiesService.getScriptProperties()
+      .getProperty('TREASURY_CACHE_PUBLISH_SECRET');
+    if (!secret) {
+      Logger.log('notifyTreasuryCachePublisher_: TREASURY_CACHE_PUBLISH_SECRET not set; skipping (cron will catch up)');
+      return;
+    }
+    var url = 'https://script.google.com/macros/s/AKfycbyBmjwmFhR8nQ5ZCtdqQwr-OgC5-htdFnMeXOKLD-Z-NWvNpLGvi7nPbMQVvnhrnbSXdQ/exec'
+      + '?action=publish&trigger=' + encodeURIComponent(trigger || 'repackaging_ingest')
+      + '&token=' + encodeURIComponent(secret);
+    var resp = UrlFetchApp.fetch(url, {
+      method: 'get',
+      muteHttpExceptions: true,
+      followRedirects: true
+    });
+    Logger.log('notifyTreasuryCachePublisher_: HTTP ' + resp.getResponseCode());
+  } catch (err) {
+    Logger.log('notifyTreasuryCachePublisher_: notify failed (non-fatal): ' + err);
   }
 }
 
