@@ -1,5 +1,554 @@
 {
-  "generatedAt": "2026-04-22T08:08:48.000Z",
+  "generatedAt": "2026-04-23T08:13:31.000Z",
   "source": "sync_agroverse_store_inventory",
-  "partners": {}
+  "partners": {
+    "edge-and-node-house-of-web3": {
+      "items": [
+        {
+          "productId": "8-ounce-organic-cacao-nibs",
+          "inventory": 5,
+          "venueInventory": 5,
+          "onlineInventory": 11,
+          "availableOnline": true,
+          "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "gtin": "860010660218"
+        }
+      ]
+    },
+    "embodied-blindfold-dance": {
+      "items": [
+        {
+          "productId": "8-ounce-organic-cacao-nibs",
+          "inventory": 5,
+          "venueInventory": 5,
+          "onlineInventory": 11,
+          "availableOnline": true,
+          "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "gtin": "860010660218"
+        }
+      ]
+    },
+    "founderhaus": {
+      "items": [
+        {
+          "productId": "8-ounce-organic-cacao-nibs",
+          "inventory": 3,
+          "venueInventory": 3,
+          "onlineInventory": 11,
+          "availableOnline": true,
+          "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "gtin": "860010660218"
+        }
+      ]
+    },
+    "go-ask-alice": {
+      "items": [
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 9,
+          "venueInventory": 9,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        },
+        {
+          "productId": "taste-of-rainforest-caramelized-cacao-beans",
+          "inventory": 5,
+          "venueInventory": 5,
+          "onlineInventory": 0,
+          "availableOnline": false,
+          "productName": "Taste of Rainforest - 200 grams Caramelized Cacao Beans",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL10",
+          "farm": "Capela Velha Fazenda",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/taste-of-rainforest.jpeg",
+          "gtin": "860010660249"
+        }
+      ]
+    },
+    "green-gulch-farm-zen-center": {
+      "items": [
+        {
+          "productId": "8-ounce-organic-cacao-nibs",
+          "inventory": 6,
+          "venueInventory": 6,
+          "onlineInventory": 11,
+          "availableOnline": true,
+          "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "gtin": "860010660218"
+        },
+        {
+          "productId": "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g",
+          "inventory": 3,
+          "venueInventory": 3,
+          "onlineInventory": 0,
+          "availableOnline": false,
+          "productName": "Ceremonial Cacao \u2013 La do Sitio Farm, Par\u00e1 Brazil, 2024 (200g)",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL8",
+          "farm": "Paulo",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/la-do-sitio-farm.jpg",
+          "gtin": "860010660232"
+        },
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 3,
+          "venueInventory": 3,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        },
+        {
+          "productId": "taste-of-rainforest-caramelized-cacao-beans",
+          "inventory": 6,
+          "venueInventory": 6,
+          "onlineInventory": 0,
+          "availableOnline": false,
+          "productName": "Taste of Rainforest - 200 grams Caramelized Cacao Beans",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL10",
+          "farm": "Capela Velha Fazenda",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/taste-of-rainforest.jpeg",
+          "gtin": "860010660249"
+        }
+      ]
+    },
+    "hacker-dojo": {
+      "items": [
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 5,
+          "venueInventory": 5,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        }
+      ]
+    },
+    "kikis-cocoa": {
+      "items": [
+        {
+          "productId": "8-ounce-organic-cacao-nibs",
+          "inventory": 10,
+          "venueInventory": 10,
+          "onlineInventory": 11,
+          "availableOnline": true,
+          "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "gtin": "860010660218"
+        },
+        {
+          "productId": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
+          "inventory": 12,
+          "venueInventory": 12,
+          "onlineInventory": 12,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Fazenda Santa Ana, Bahia Brazil, 2023 (200g)",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL2",
+          "farm": "Fazenda Santa Ana",
+          "imagePath": "https://www.agroverse.shop/assets/images/farms/fazenda-santa-ana-itacare.jpg",
+          "gtin": "860010660232"
+        },
+        {
+          "productId": "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023",
+          "inventory": 17,
+          "venueInventory": 17,
+          "onlineInventory": 17,
+          "availableOnline": true,
+          "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Fazenda Santa Ana, Bahia Brazil, 2023",
+          "priceUsd": "10",
+          "category": "Retail",
+          "shipment": "AGL2",
+          "farm": "Fazenda Santa Ana, Bahia",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
+        },
+        {
+          "productId": "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024",
+          "inventory": 20,
+          "venueInventory": 20,
+          "onlineInventory": 20,
+          "availableOnline": true,
+          "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Oscar's Farm, Bahia Brazil, 2024",
+          "priceUsd": "10",
+          "category": "Retail",
+          "shipment": "AGL4",
+          "farm": "Oscar's Farm, Bahia",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
+        },
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 46,
+          "venueInventory": 46,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        }
+      ]
+    },
+    "llama-bus": {
+      "items": [
+        {
+          "productId": "8-ounce-organic-cacao-nibs",
+          "inventory": 1,
+          "venueInventory": 1,
+          "onlineInventory": 11,
+          "availableOnline": true,
+          "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "gtin": "860010660218"
+        }
+      ]
+    },
+    "love-wisdom-power": {
+      "items": [
+        {
+          "productId": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
+          "inventory": 15,
+          "venueInventory": 15,
+          "onlineInventory": 12,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Fazenda Santa Ana, Bahia Brazil, 2023 (200g)",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL2",
+          "farm": "Fazenda Santa Ana",
+          "imagePath": "https://www.agroverse.shop/assets/images/farms/fazenda-santa-ana-itacare.jpg",
+          "gtin": "860010660232"
+        },
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 1,
+          "venueInventory": 1,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        }
+      ]
+    },
+    "lumin-earth-apothecary": {
+      "items": [
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 5,
+          "venueInventory": 5,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        }
+      ]
+    },
+    "miss-tomato": {
+      "items": [
+        {
+          "productId": "8-ounce-organic-cacao-nibs",
+          "inventory": 10,
+          "venueInventory": 10,
+          "onlineInventory": 11,
+          "availableOnline": true,
+          "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "gtin": "860010660218"
+        }
+      ]
+    },
+    "queen-hippie-gypsy": {
+      "items": [
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 8,
+          "venueInventory": 8,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        }
+      ]
+    },
+    "raven-things-collected": {
+      "items": [
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 1,
+          "venueInventory": 1,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        }
+      ]
+    },
+    "republic-cafe-and-ming-lounge": {
+      "items": [
+        {
+          "productId": "8-ounce-organic-cacao-nibs",
+          "inventory": 3,
+          "venueInventory": 3,
+          "onlineInventory": 11,
+          "availableOnline": true,
+          "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "gtin": "860010660218"
+        }
+      ]
+    },
+    "rhythm-and-stones": {
+      "items": [
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 3,
+          "venueInventory": 3,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        },
+        {
+          "productId": "taste-of-rainforest-caramelized-cacao-beans",
+          "inventory": 1,
+          "venueInventory": 1,
+          "onlineInventory": 0,
+          "availableOnline": false,
+          "productName": "Taste of Rainforest - 200 grams Caramelized Cacao Beans",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL10",
+          "farm": "Capela Velha Fazenda",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/taste-of-rainforest.jpeg",
+          "gtin": "860010660249"
+        }
+      ]
+    },
+    "rpm-ninja": {
+      "items": [
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 7,
+          "venueInventory": 7,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        }
+      ]
+    },
+    "sacred-earth-farms": {
+      "items": [
+        {
+          "productId": "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g",
+          "inventory": 4,
+          "venueInventory": 4,
+          "onlineInventory": 0,
+          "availableOnline": false,
+          "productName": "Ceremonial Cacao \u2013 La do Sitio Farm, Par\u00e1 Brazil, 2024 (200g)",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL8",
+          "farm": "Paulo",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/la-do-sitio-farm.jpg",
+          "gtin": "860010660232"
+        },
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 15,
+          "venueInventory": 15,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        }
+      ]
+    },
+    "secrets-of-garden-slo": {
+      "items": [
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 9,
+          "venueInventory": 9,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        }
+      ]
+    },
+    "shuar-design-boutique": {
+      "items": [
+        {
+          "productId": "8-ounce-organic-cacao-nibs",
+          "inventory": 30,
+          "venueInventory": 30,
+          "onlineInventory": 11,
+          "availableOnline": true,
+          "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "gtin": "860010660218"
+        }
+      ]
+    },
+    "the-enchanted-forest-boutique": {
+      "items": [
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 10,
+          "venueInventory": 10,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        }
+      ]
+    },
+    "the-ponderosa-slab-city": {
+      "items": [
+        {
+          "productId": "8-ounce-organic-cacao-nibs",
+          "inventory": 5,
+          "venueInventory": 5,
+          "onlineInventory": 11,
+          "availableOnline": true,
+          "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "gtin": "860010660218"
+        }
+      ]
+    },
+    "the-whole-body-repair-clinic": {
+      "items": [
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 6,
+          "venueInventory": 6,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
+        }
+      ]
+    }
+  }
 }
