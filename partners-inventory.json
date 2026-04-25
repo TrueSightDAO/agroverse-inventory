@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-24T08:25:23.000Z",
+  "generatedAt": "2026-04-25T07:47:53.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "edge-and-node-house-of-web3": {
@@ -292,8 +292,8 @@
       "items": [
         {
           "productId": "oscar-bahia-ceremonial-cacao-200g",
-          "inventory": 5,
-          "venueInventory": 5,
+          "inventory": 4,
+          "venueInventory": 4,
           "onlineInventory": 56,
           "availableOnline": true,
           "productName": "Ceremonial Cacao \u2013 Oscar",
