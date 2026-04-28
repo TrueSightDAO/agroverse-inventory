@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T18:24:46.000Z",
+  "generatedAt": "2026-04-28T21:02:17.000Z",
   "source": "sync_partners_velocity",
   "windowsDays": [
     30,
@@ -7,33 +7,33 @@
     365
   ],
   "category_medians": {
+    "oscar-bahia-ceremonial-cacao-200g": {
+      "monthly": 0.833,
+      "sample_size": 14
+    },
     "8-ounce-organic-cacao-nibs": {
       "monthly": 0.5,
       "sample_size": 7
     },
-    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
-      "monthly": 0.25,
-      "sample_size": 1
-    },
-    "oscar-bahia-ceremonial-cacao-200g": {
-      "monthly": 0.833,
-      "sample_size": 15
-    },
-    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
-      "monthly": 0.25,
-      "sample_size": 1
-    },
-    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
-      "monthly": 1.583,
-      "sample_size": 1
+    "taste-of-rainforest-caramelized-cacao-beans": {
+      "monthly": 0.417,
+      "sample_size": 3
     },
     "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
       "monthly": 0.75,
       "sample_size": 2
     },
-    "taste-of-rainforest-caramelized-cacao-beans": {
-      "monthly": 0.417,
-      "sample_size": 3
+    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
+      "monthly": 1.583,
+      "sample_size": 1
+    },
+    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
+      "monthly": 0.25,
+      "sample_size": 1
+    },
+    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
+      "monthly": 0.25,
+      "sample_size": 1
     }
   },
   "partners": {
@@ -604,20 +604,7 @@
       "partner_name": "The Way Home Shop",
       "location": "Portland, Oregon",
       "partner_type": "Consignment",
-      "items": {
-        "oscar-bahia-ceremonial-cacao-200g": {
-          "sales_30d": 0,
-          "sales_90d": 0,
-          "sales_12m_monthly_avg": 0,
-          "last_sale_date": null,
-          "sample_size_sales": 0,
-          "restocks_30d": 10.0,
-          "restocks_90d": 10.0,
-          "restocks_12m_monthly_avg": 0.833,
-          "last_restock_date": "2026-04-28",
-          "sample_size_restocks": 10
-        }
-      }
+      "items": {}
     },
     "the-whole-body-repair-clinic": {
       "partner_name": "The Whole Body Repair Clinic",
