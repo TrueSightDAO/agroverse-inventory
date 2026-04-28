@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T08:41:56.000Z",
+  "generatedAt": "2026-04-28T21:02:09.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "edge-and-node-house-of-web3": {
@@ -224,8 +224,8 @@
         },
         {
           "productId": "oscar-bahia-ceremonial-cacao-200g",
-          "inventory": 46,
-          "venueInventory": 46,
+          "inventory": 36,
+          "venueInventory": 36,
           "onlineInventory": 56,
           "availableOnline": true,
           "productName": "Ceremonial Cacao \u2013 Oscar",
@@ -529,6 +529,24 @@
           "farm": "Oscar",
           "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
+        }
+      ]
+    },
+    "the-way-home-shop": {
+      "items": [
+        {
+          "productId": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory": 10,
+          "venueInventory": 10,
+          "onlineInventory": 56,
+          "availableOnline": true,
+          "productName": "Ceremonial Cacao \u2013 Oscar",
+          "priceUsd": "$25.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "gtin": "860010660232"
         }
       ]
     },
