@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-27T21:40:34.000Z",
+  "generatedAt": "2026-04-28T18:24:46.000Z",
   "source": "sync_partners_velocity",
   "windowsDays": [
     30,
@@ -7,57 +7,69 @@
     365
   ],
   "category_medians": {
-    "oscar-bahia-ceremonial-cacao-200g": {
-      "monthly": 0.833,
-      "sample_size": 14
-    },
-    "taste-of-rainforest-caramelized-cacao-beans": {
-      "monthly": 0.417,
-      "sample_size": 3
-    },
     "8-ounce-organic-cacao-nibs": {
       "monthly": 0.5,
       "sample_size": 7
     },
-    "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
-      "monthly": 0.75,
-      "sample_size": 2
-    },
-    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
-      "monthly": 1.583,
+    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
+      "monthly": 0.25,
       "sample_size": 1
+    },
+    "oscar-bahia-ceremonial-cacao-200g": {
+      "monthly": 0.833,
+      "sample_size": 15
     },
     "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
       "monthly": 0.25,
       "sample_size": 1
     },
-    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
-      "monthly": 0.25,
+    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
+      "monthly": 1.583,
       "sample_size": 1
+    },
+    "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
+      "monthly": 0.75,
+      "sample_size": 2
+    },
+    "taste-of-rainforest-caramelized-cacao-beans": {
+      "monthly": 0.417,
+      "sample_size": 3
     }
   },
   "partners": {
     "../cooperatives/cepotx": {
+      "partner_name": "CEPOTX Cooperative",
+      "location": "Par\u00e1, Amazon Rainforest, Brazil",
       "partner_type": "Supplier",
       "items": {}
     },
     "../cooperatives/coopercabruca": {
+      "partner_name": "Coopercabruca Cooperative",
+      "location": "Bahia, Brazil",
       "partner_type": "Supplier",
       "items": {}
     },
     "black-king-ilheus": {
+      "partner_name": "Black King",
+      "location": "Ilh\u00e9us, Bahia, Brazil",
       "partner_type": "Operator",
       "items": {}
     },
     "block71-silicon-valley": {
+      "partner_name": "Block71 Silicon Valley",
+      "location": "Silicon Valley, California",
       "partner_type": "Consignment",
       "items": {}
     },
     "cic-cacao-innovation-center": {
+      "partner_name": "CIC - Centro de Inova\u00e7\u00e3o do Cacau",
+      "location": "Ilh\u00e9us, Bahia, Brazil",
       "partner_type": "Supplier",
       "items": {}
     },
     "edge-and-node-house-of-web3": {
+      "partner_name": "Edge and Node, House of Web3",
+      "location": "San Francisco, California",
       "partner_type": "Consignment",
       "items": {
         "8-ounce-organic-cacao-nibs": {
@@ -75,6 +87,8 @@
       }
     },
     "embodied-blindfold-dance": {
+      "partner_name": "Embodied Blindfold Dance",
+      "location": "Eugene, Oregon",
       "partner_type": "Consignment",
       "items": {
         "8-ounce-organic-cacao-nibs": {
@@ -92,10 +106,14 @@
       }
     },
     "founderhaus": {
+      "partner_name": "Founder Haus",
+      "location": "Florian\u00f3polis, Brazil",
       "partner_type": "Consignment",
       "items": {}
     },
     "go-ask-alice": {
+      "partner_name": "Go Ask Alice",
+      "location": "Santa Cruz, California",
       "partner_type": "Consignment",
       "items": {
         "oscar-bahia-ceremonial-cacao-200g": {
@@ -125,6 +143,8 @@
       }
     },
     "green-gulch-farm-zen-center": {
+      "partner_name": "Green Gulch Farm Zen Center",
+      "location": "Marin County, California",
       "partner_type": "Consignment",
       "items": {
         "8-ounce-organic-cacao-nibs": {
@@ -178,6 +198,8 @@
       }
     },
     "hacker-dojo": {
+      "partner_name": "Hacker Dojo",
+      "location": "Mountain View, California",
       "partner_type": "Consignment",
       "items": {
         "oscar-bahia-ceremonial-cacao-200g": {
@@ -195,10 +217,14 @@
       }
     },
     "heierling-ski": {
+      "partner_name": "Heierling Ski",
+      "location": "Switzerland",
       "partner_type": "Consignment",
       "items": {}
     },
     "kikis-cocoa": {
+      "partner_name": "Kiki's Cocoa",
+      "location": "San Francisco, California",
       "partner_type": "Operator",
       "items": {
         "8-ounce-organic-cacao-nibs": {
@@ -244,7 +270,7 @@
           "last_sale_date": "2026-04-12",
           "sample_size_sales": 1,
           "restocks_30d": 0.0,
-          "restocks_90d": 5.0,
+          "restocks_90d": 0.0,
           "restocks_12m_monthly_avg": 5.667,
           "last_restock_date": "2026-01-27",
           "sample_size_restocks": 8
@@ -252,6 +278,8 @@
       }
     },
     "llama-bus": {
+      "partner_name": "Llama Bus",
+      "location": "Pop-up Vendor",
       "partner_type": "Consignment",
       "items": {
         "8-ounce-organic-cacao-nibs": {
@@ -281,10 +309,14 @@
       }
     },
     "love-of-ganesha": {
+      "partner_name": "Love of Ganesha",
+      "location": "San Francisco, California",
       "partner_type": "Wholesale",
       "items": {}
     },
     "love-wisdom-power": {
+      "partner_name": "Love Wisdom Power",
+      "location": "Williams, Oregon",
       "partner_type": "Consignment",
       "items": {
         "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
@@ -314,6 +346,8 @@
       }
     },
     "lumin-earth-apothecary": {
+      "partner_name": "Lumin Earth Apothecary",
+      "location": "Morro Bay, California",
       "partner_type": "Consignment",
       "items": {
         "oscar-bahia-ceremonial-cacao-200g": {
@@ -331,26 +365,38 @@
       }
     },
     "miss-tomato": {
+      "partner_name": "Miss Tomato",
+      "location": "Daly City, California",
       "partner_type": "Consignment",
       "items": {}
     },
     "okanogan-family-barter-faire": {
+      "partner_name": "Okanogan Family Barter Faire",
+      "location": "Okanogan, Washington",
       "partner_type": "Consignment",
       "items": {}
     },
     "orbis86": {
+      "partner_name": "Orbis86",
+      "location": "San Francisco, California",
       "partner_type": "Consignment",
       "items": {}
     },
     "peace-on-fifth": {
+      "partner_name": "Peace on Fifth",
+      "location": "Dayton, Ohio",
       "partner_type": "Wholesale",
       "items": {}
     },
     "prism-percussions": {
+      "partner_name": "Prism Percussions",
+      "location": "Corvallis, Oregon",
       "partner_type": "Consignment",
       "items": {}
     },
     "queen-hippie-gypsy": {
+      "partner_name": "Queen Hippie Gypsy",
+      "location": "Downtown Oakland, California",
       "partner_type": "Consignment",
       "items": {
         "oscar-bahia-ceremonial-cacao-200g": {
@@ -368,14 +414,20 @@
       }
     },
     "raven-things-collected": {
+      "partner_name": "Raven Things Collected",
+      "location": "Los Angeles, California",
       "partner_type": "Consignment",
       "items": {}
     },
     "raye-workz": {
+      "partner_name": "Raye Workz",
+      "location": "Pop-up Vendor",
       "partner_type": "Consignment",
       "items": {}
     },
     "republic-cafe-and-ming-lounge": {
+      "partner_name": "Republic Cafe and Ming Lounge",
+      "location": "Portland, Oregon",
       "partner_type": "Consignment",
       "items": {
         "8-ounce-organic-cacao-nibs": {
@@ -393,6 +445,8 @@
       }
     },
     "rhythm-and-stones": {
+      "partner_name": "Rhythm and Stones",
+      "location": "Pop-up Vendor",
       "partner_type": "Consignment",
       "items": {
         "oscar-bahia-ceremonial-cacao-200g": {
@@ -422,6 +476,8 @@
       }
     },
     "rpm-ninja": {
+      "partner_name": "RPM Ninja",
+      "location": "Seattle, Washington",
       "partner_type": "Consignment",
       "items": {
         "oscar-bahia-ceremonial-cacao-200g": {
@@ -439,6 +495,8 @@
       }
     },
     "sacred-earth-farms": {
+      "partner_name": "Sacred Earth Farms",
+      "location": "Merlin, Oregon",
       "partner_type": "Consignment",
       "items": {
         "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
@@ -468,6 +526,8 @@
       }
     },
     "secrets-of-garden-slo": {
+      "partner_name": "Secrets of Garden SLO",
+      "location": "San Luis Obispo, California",
       "partner_type": "Consignment",
       "items": {
         "oscar-bahia-ceremonial-cacao-200g": {
@@ -485,6 +545,8 @@
       }
     },
     "shuar-design-boutique": {
+      "partner_name": "Shuar Design Boutique",
+      "location": "Bern, Switzerland",
       "partner_type": "Consignment",
       "items": {
         "8-ounce-organic-cacao-nibs": {
@@ -502,14 +564,20 @@
       }
     },
     "soha": {
+      "partner_name": "SOHA - Sanctuary of Healing Arts",
+      "location": "Philomath, Oregon",
       "partner_type": "Wholesale",
       "items": {}
     },
     "soulfulness-breathe": {
+      "partner_name": "Soulfulness Breathe",
+      "location": "Denver, Colorado",
       "partner_type": "Wholesale",
       "items": {}
     },
     "the-enchanted-forest-boutique": {
+      "partner_name": "The Enchanted Forest Boutique",
+      "location": "Chico, California",
       "partner_type": "Consignment",
       "items": {
         "oscar-bahia-ceremonial-cacao-200g": {
@@ -527,10 +595,33 @@
       }
     },
     "the-ponderosa-slab-city": {
+      "partner_name": "The Ponderosa, Slab City",
+      "location": "Slab City, California",
       "partner_type": "Consignment",
       "items": {}
     },
+    "the-way-home-shop": {
+      "partner_name": "The Way Home Shop",
+      "location": "Portland, Oregon",
+      "partner_type": "Consignment",
+      "items": {
+        "oscar-bahia-ceremonial-cacao-200g": {
+          "sales_30d": 0,
+          "sales_90d": 0,
+          "sales_12m_monthly_avg": 0,
+          "last_sale_date": null,
+          "sample_size_sales": 0,
+          "restocks_30d": 10.0,
+          "restocks_90d": 10.0,
+          "restocks_12m_monthly_avg": 0.833,
+          "last_restock_date": "2026-04-28",
+          "sample_size_restocks": 10
+        }
+      }
+    },
     "the-whole-body-repair-clinic": {
+      "partner_name": "The Whole Body Repair Clinic",
+      "location": "Quartzsite, Arizona",
       "partner_type": "Consignment",
       "items": {
         "oscar-bahia-ceremonial-cacao-200g": {
