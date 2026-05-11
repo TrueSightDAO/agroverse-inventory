@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T21:04:34.000Z",
+  "generatedAt": "2026-05-11T23:39:09.000Z",
   "source": "sync_partners_velocity",
   "windowsDays": [
     30,
@@ -7,29 +7,29 @@
     365
   ],
   "category_medians": {
-    "oscar-bahia-ceremonial-cacao-200g": {
-      "monthly": 0.833,
-      "sample_size": 14
-    },
-    "taste-of-rainforest-caramelized-cacao-beans": {
-      "monthly": 0.333,
-      "sample_size": 4
-    },
-    "8-ounce-organic-cacao-nibs": {
-      "monthly": 0.5,
-      "sample_size": 7
+    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
+      "monthly": 1.917,
+      "sample_size": 1
     },
     "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
       "monthly": 0.833,
-      "sample_size": 2
+      "sample_size": 3
+    },
+    "taste-of-rainforest-caramelized-cacao-beans": {
+      "monthly": 0.25,
+      "sample_size": 5
+    },
+    "8-ounce-organic-cacao-nibs": {
+      "monthly": 0.458,
+      "sample_size": 8
     },
     "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
       "monthly": 0.333,
       "sample_size": 3
     },
-    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
-      "monthly": 1.917,
-      "sample_size": 1
+    "oscar-bahia-ceremonial-cacao-200g": {
+      "monthly": 0.833,
+      "sample_size": 15
     },
     "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
       "monthly": 1.667,
@@ -428,7 +428,32 @@
       "partner_name": "Prism Percussions",
       "location": "Corvallis, Oregon",
       "partner_type": "Consignment",
-      "items": {}
+      "items": {
+        "8-ounce-organic-cacao-nibs": {
+          "sales_30d": 0.0,
+          "sales_90d": 0.0,
+          "sales_12m_monthly_avg": 0.417,
+          "last_sale_date": "2026-01-23",
+          "sample_size_sales": 5,
+          "restocks_30d": 0,
+          "restocks_90d": 0,
+          "restocks_12m_monthly_avg": 0,
+          "last_restock_date": null,
+          "sample_size_restocks": 0
+        },
+        "taste-of-rainforest-caramelized-cacao-beans": {
+          "sales_30d": 0.0,
+          "sales_90d": 0.0,
+          "sales_12m_monthly_avg": 0.083,
+          "last_sale_date": "2026-01-22",
+          "sample_size_sales": 1,
+          "restocks_30d": 0.0,
+          "restocks_90d": 0.0,
+          "restocks_12m_monthly_avg": 0.083,
+          "last_restock_date": "2026-01-20",
+          "sample_size_restocks": 1
+        }
+      }
     },
     "queen-hippie-gypsy": {
       "partner_name": "Queen Hippie Gypsy",
@@ -603,7 +628,32 @@
       "partner_name": "SOHA - Sanctuary of Healing Arts",
       "location": "Philomath, Oregon",
       "partner_type": "Wholesale",
-      "items": {}
+      "items": {
+        "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
+          "sales_30d": 0.0,
+          "sales_90d": 0.0,
+          "sales_12m_monthly_avg": 0.833,
+          "last_sale_date": "2026-01-15",
+          "sample_size_sales": 10,
+          "restocks_30d": 0.0,
+          "restocks_90d": 0.0,
+          "restocks_12m_monthly_avg": 0.833,
+          "last_restock_date": "2026-01-15",
+          "sample_size_restocks": 10
+        },
+        "oscar-bahia-ceremonial-cacao-200g": {
+          "sales_30d": 0.0,
+          "sales_90d": 0.0,
+          "sales_12m_monthly_avg": 0.833,
+          "last_sale_date": "2026-01-15",
+          "sample_size_sales": 10,
+          "restocks_30d": 0.0,
+          "restocks_90d": 0.0,
+          "restocks_12m_monthly_avg": 0.833,
+          "last_restock_date": "2026-01-15",
+          "sample_size_restocks": 10
+        }
+      }
     },
     "soulfulness-breathe": {
       "partner_name": "Soulfulness Breathe",
