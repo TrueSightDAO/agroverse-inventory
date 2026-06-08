@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T12:23:31.000Z",
+  "generatedAt": "2026-06-08T11:30:38.000Z",
   "source": "sync_partners_velocity",
   "windowsDays": [
     30,
@@ -7,21 +7,25 @@
     365
   ],
   "category_medians": {
-    "8-ounce-organic-cacao-nibs": {
-      "monthly": 0.458,
-      "sample_size": 8
-    },
     "oscar-bahia-ceremonial-cacao-200g": {
       "monthly": 0.833,
       "sample_size": 16
+    },
+    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
+      "monthly": 0.833,
+      "sample_size": 3
     },
     "taste-of-rainforest-caramelized-cacao-beans": {
       "monthly": 0.25,
       "sample_size": 5
     },
-    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
-      "monthly": 0.833,
-      "sample_size": 3
+    "8-ounce-organic-cacao-nibs": {
+      "monthly": 0.458,
+      "sample_size": 8
+    },
+    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
+      "monthly": 1.667,
+      "sample_size": 1
     },
     "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
       "monthly": 0.333,
@@ -29,10 +33,6 @@
     },
     "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
       "monthly": 1.917,
-      "sample_size": 1
-    },
-    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
-      "monthly": 1.667,
       "sample_size": 1
     }
   },
@@ -240,16 +240,16 @@
           "sample_size_restocks": 4
         },
         "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
-          "sales_30d": 0.0,
-          "sales_90d": 0.0,
-          "sales_12m_monthly_avg": 0.083,
-          "last_sale_date": "2026-02-23",
-          "sample_size_sales": 1,
-          "restocks_30d": 0,
-          "restocks_90d": 0,
-          "restocks_12m_monthly_avg": 0,
-          "last_restock_date": null,
-          "sample_size_restocks": 0
+          "sales_30d": 1.0,
+          "sales_90d": 1.0,
+          "sales_12m_monthly_avg": 0.167,
+          "last_sale_date": "2026-06-02",
+          "sample_size_sales": 2,
+          "restocks_30d": 9.0,
+          "restocks_90d": 9.0,
+          "restocks_12m_monthly_avg": 0.75,
+          "last_restock_date": "2026-06-02",
+          "sample_size_restocks": 9
         },
         "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
           "sales_30d": 0.0,
@@ -288,16 +288,16 @@
           "sample_size_restocks": 0
         },
         "oscar-bahia-ceremonial-cacao-200g": {
-          "sales_30d": 0.0,
-          "sales_90d": 2.0,
+          "sales_30d": 1.0,
+          "sales_90d": 3.0,
           "sales_12m_monthly_avg": 1.667,
-          "last_sale_date": "2026-04-12",
+          "last_sale_date": "2026-06-02",
           "sample_size_sales": 20,
-          "restocks_30d": 0.0,
-          "restocks_90d": 0.0,
-          "restocks_12m_monthly_avg": 5.667,
-          "last_restock_date": "2026-01-27",
-          "sample_size_restocks": 8
+          "restocks_30d": 10.0,
+          "restocks_90d": 10.0,
+          "restocks_12m_monthly_avg": 6.5,
+          "last_restock_date": "2026-06-02",
+          "sample_size_restocks": 18
         },
         "taste-of-rainforest-caramelized-cacao-beans": {
           "sales_30d": 0.0,
@@ -357,7 +357,7 @@
       "items": {
         "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
           "sales_30d": 0.0,
-          "sales_90d": 4.0,
+          "sales_90d": 1.0,
           "sales_12m_monthly_avg": 0.333,
           "last_sale_date": "2026-03-17",
           "sample_size_sales": 4,
@@ -369,7 +369,7 @@
         },
         "oscar-bahia-ceremonial-cacao-200g": {
           "sales_30d": 0.0,
-          "sales_90d": 1.0,
+          "sales_90d": 0.0,
           "sales_12m_monthly_avg": 0.667,
           "last_sale_date": "2026-03-04",
           "sample_size_sales": 8,
