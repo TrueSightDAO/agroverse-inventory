@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-13T09:36:17.000Z",
-  "source": "sync_agroverse_store_inventory",
+  "generatedAt": "2026-06-13T20:28:37.781Z",
+  "source": "update_store_inventory",
   "inventory": {
     "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": 0,
     "taste-of-rainforest-caramelized-cacao-beans": 0,
-    "oscar-bahia-ceremonial-cacao-200g": 24,
+    "oscar-bahia-ceremonial-cacao-200g": 23,
     "8-ounce-organic-cacao-nibs": 12,
     "organic-criollo-cacao-beans-oscar-farm": 0,
     "organic-hybrid-cacao-beans-jesus-da-deus": 0,
