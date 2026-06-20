@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "request_id": "b08d324b-e2f4-4645-9d25-ee43f9e7d9e0",
+  "generated_at": "2026-06-20T22:59:48.190Z",
+  "source": "repackaging_currency_ingest",
+  "event": "repackaging_batch_creation",
+  "holder": {
+    "key": null,
+    "label": null
+  },
+  "inputs": [
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "8 Ounce Package Kraft Pouch  CP340992735BR",
+      "quantity": 7,
+      "unit_cost_usd": 8.509333333333332,
+      "extended_cost_usd": 59.565333
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771",
+      "quantity": 3,
+      "unit_cost_usd": 0.73529,
+      "extended_cost_usd": 2.20587
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Sticker Mule 4x2in custom rectangle label (per piece, order R384751187)",
+      "quantity": 15,
+      "unit_cost_usd": 0.554,
+      "extended_cost_usd": 8.31
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "RLAVBL 7x5x4 corrugated ship box (50ct, Amazon 111-6184462-4075467)",
+      "quantity": 15,
+      "unit_cost_usd": 0.554,
+      "extended_cost_usd": 8.31
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | 8 Ounce Nibs CP340992735BR | Kirsten 20260620 | San Francisco - AGL4",
+      "suggested_currency": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | 8 Ounce Nibs CP340992735BR | Kirsten 20260620 | San Francisco - AGL4",
+      "units": 3,
+      "unit_kind": "pouch",
+      "unit_custom": null,
+      "weight_per_unit_grams": 200,
+      "weight_display": {
+        "amount": 200,
+        "unit": "g"
+      },
+      "total_weight_grams": 600,
+      "unit_cost_usd": 11.613512,
+      "line_total_usd": 34.840536
+    },
+    {
+      "label": "Agroverse 81% Cacao Chocolate Bar 50g | 8 Ounce Nibs CP340992735BR | Kirsten 20260620 | San Francisco - AGL4",
+      "suggested_currency": "Agroverse 81% Cacao Chocolate Bar 50g | 8 Ounce Nibs CP340992735BR | Kirsten 20260620 | San Francisco - AGL4",
+      "units": 15,
+      "unit_kind": "each",
+      "unit_custom": null,
+      "weight_per_unit_grams": 50,
+      "weight_display": {
+        "amount": 50,
+        "unit": "g"
+      },
+      "total_weight_grams": 750,
+      "unit_cost_usd": 2.903378,
+      "line_total_usd": 43.55067
+    }
+  ],
+  "totals": {
+    "inputs_subtotal_usd": 78.391203,
+    "grand_total_usd": 78.391203,
+    "total_output_weight_grams": 1350,
+    "cost_per_gram_usd": 0.0580675578
+  },
+  "raw_request_text": null,
+  "client": {
+    "client_generated_at": "2026-06-20T22:59:41.125497+00:00"
+  }
+}
