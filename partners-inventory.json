@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T09:44:27.000Z",
+  "generatedAt": "2026-06-21T10:07:07.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -425,38 +425,6 @@
           "farm": "Oscar",
           "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
-        }
-      ]
-    },
-    "soha": {
-      "items": [
-        {
-          "productId": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
-          "inventory": 7,
-          "venueInventory": 7,
-          "onlineInventory": 2,
-          "availableOnline": true,
-          "productName": "Ceremonial Cacao \u2013 Fazenda Santa Ana, Bahia Brazil, 2023 (200g)",
-          "priceUsd": "$25.00",
-          "category": "retail",
-          "shipment": "AGL2",
-          "farm": "Fazenda Santa Ana",
-          "imagePath": "https://www.agroverse.shop/assets/images/farms/fazenda-santa-ana-itacare.jpg",
-          "gtin": "860010660232"
-        },
-        {
-          "productId": "oscar-bahia-ceremonial-cacao-200g",
-          "inventory": 33,
-          "venueInventory": 33,
-          "onlineInventory": 0,
-          "availableOnline": false,
-          "productName": "Ceremonial Cacao \u2013 Oscar",
-          "priceUsd": "$25.00",
-          "category": "retail",
-          "shipment": "AGL4",
-          "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
-          "gtin": "860010660232"
         }
       ]
     },
