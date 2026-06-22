@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T12:54:16.000Z",
+  "generatedAt": "2026-06-22T12:37:55.000Z",
   "source": "sync_partners_velocity",
   "windowsDays": [
     30,
@@ -13,15 +13,11 @@
     },
     "oscar-bahia-ceremonial-cacao-200g": {
       "monthly": 0.833,
-      "sample_size": 16
+      "sample_size": 17
     },
-    "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
-      "monthly": 0.333,
+    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
+      "monthly": 1.417,
       "sample_size": 3
-    },
-    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
-      "monthly": 1.667,
-      "sample_size": 1
     },
     "taste-of-rainforest-caramelized-cacao-beans": {
       "monthly": 0.25,
@@ -31,9 +27,13 @@
       "monthly": 1.917,
       "sample_size": 1
     },
-    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
-      "monthly": 0.833,
+    "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
+      "monthly": 0.333,
       "sample_size": 3
+    },
+    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
+      "monthly": 1.667,
+      "sample_size": 1
     }
   },
   "partners": {
@@ -233,11 +233,11 @@
           "sales_12m_monthly_avg": 0.917,
           "last_sale_date": "2026-04-12",
           "sample_size_sales": 11,
-          "restocks_30d": 0.0,
-          "restocks_90d": 0.0,
-          "restocks_12m_monthly_avg": 5.0,
-          "last_restock_date": "2025-11-03",
-          "sample_size_restocks": 4
+          "restocks_30d": 21.0,
+          "restocks_90d": 21.0,
+          "restocks_12m_monthly_avg": 6.75,
+          "last_restock_date": "2026-06-19",
+          "sample_size_restocks": 25
         },
         "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
           "sales_30d": 1.0,
@@ -245,11 +245,11 @@
           "sales_12m_monthly_avg": 0.167,
           "last_sale_date": "2026-06-02",
           "sample_size_sales": 2,
-          "restocks_30d": 9.0,
-          "restocks_90d": 9.0,
-          "restocks_12m_monthly_avg": 0.75,
-          "last_restock_date": "2026-06-02",
-          "sample_size_restocks": 9
+          "restocks_30d": 10.0,
+          "restocks_90d": 10.0,
+          "restocks_12m_monthly_avg": 0.833,
+          "last_restock_date": "2026-06-18",
+          "sample_size_restocks": 10
         },
         "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
           "sales_30d": 0.0,
@@ -293,11 +293,11 @@
           "sales_12m_monthly_avg": 1.667,
           "last_sale_date": "2026-06-02",
           "sample_size_sales": 20,
-          "restocks_30d": 10.0,
-          "restocks_90d": 10.0,
-          "restocks_12m_monthly_avg": 6.5,
-          "last_restock_date": "2026-06-02",
-          "sample_size_restocks": 18
+          "restocks_30d": 20.0,
+          "restocks_90d": 20.0,
+          "restocks_12m_monthly_avg": 7.333,
+          "last_restock_date": "2026-06-18",
+          "sample_size_restocks": 28
         },
         "taste-of-rainforest-caramelized-cacao-beans": {
           "sales_30d": 0.0,
@@ -363,12 +363,12 @@
       "items": {
         "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
           "sales_30d": 0.0,
-          "sales_90d": 1.0,
+          "sales_90d": 0.0,
           "sales_12m_monthly_avg": 0.333,
           "last_sale_date": "2026-03-17",
           "sample_size_sales": 4,
           "restocks_30d": 0.0,
-          "restocks_90d": 10.0,
+          "restocks_90d": 0.0,
           "restocks_12m_monthly_avg": 1.583,
           "last_restock_date": "2026-03-18",
           "sample_size_restocks": 19
@@ -636,28 +636,28 @@
       "partner_type": "Wholesale",
       "items": {
         "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
-          "sales_30d": 0.0,
-          "sales_90d": 0.0,
-          "sales_12m_monthly_avg": 0.833,
-          "last_sale_date": "2026-01-15",
-          "sample_size_sales": 10,
-          "restocks_30d": 0.0,
-          "restocks_90d": 0.0,
-          "restocks_12m_monthly_avg": 0.833,
-          "last_restock_date": "2026-01-15",
-          "sample_size_restocks": 10
+          "sales_30d": 7.0,
+          "sales_90d": 7.0,
+          "sales_12m_monthly_avg": 1.417,
+          "last_sale_date": "2026-06-20",
+          "sample_size_sales": 17,
+          "restocks_30d": 7.0,
+          "restocks_90d": 7.0,
+          "restocks_12m_monthly_avg": 1.417,
+          "last_restock_date": "2026-06-19",
+          "sample_size_restocks": 17
         },
         "oscar-bahia-ceremonial-cacao-200g": {
-          "sales_30d": 0.0,
-          "sales_90d": 0.0,
-          "sales_12m_monthly_avg": 0.833,
-          "last_sale_date": "2026-01-15",
-          "sample_size_sales": 10,
-          "restocks_30d": 0.0,
-          "restocks_90d": 0.0,
-          "restocks_12m_monthly_avg": 0.833,
-          "last_restock_date": "2026-01-15",
-          "sample_size_restocks": 10
+          "sales_30d": 33.0,
+          "sales_90d": 33.0,
+          "sales_12m_monthly_avg": 3.583,
+          "last_sale_date": "2026-06-20",
+          "sample_size_sales": 43,
+          "restocks_30d": 61.0,
+          "restocks_90d": 61.0,
+          "restocks_12m_monthly_avg": 5.917,
+          "last_restock_date": "2026-06-19",
+          "sample_size_restocks": 71
         }
       }
     },
@@ -679,7 +679,7 @@
           "last_sale_date": null,
           "sample_size_sales": 0,
           "restocks_30d": 0.0,
-          "restocks_90d": 5.0,
+          "restocks_90d": 0.0,
           "restocks_12m_monthly_avg": 0.417,
           "last_restock_date": "2026-03-18",
           "sample_size_restocks": 5
@@ -715,7 +715,20 @@
       "partner_name": "The Way Home Shop",
       "location": "Portland, Oregon",
       "partner_type": "Consignment",
-      "items": {}
+      "items": {
+        "oscar-bahia-ceremonial-cacao-200g": {
+          "sales_30d": 3.0,
+          "sales_90d": 3.0,
+          "sales_12m_monthly_avg": 0.25,
+          "last_sale_date": "2026-06-18",
+          "sample_size_sales": 3,
+          "restocks_30d": 0,
+          "restocks_90d": 0,
+          "restocks_12m_monthly_avg": 0,
+          "last_restock_date": null,
+          "sample_size_restocks": 0
+        }
+      }
     },
     "the-whole-body-repair-clinic": {
       "partner_name": "The Whole Body Repair Clinic",
