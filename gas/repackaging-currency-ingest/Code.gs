@@ -95,11 +95,14 @@ function doGet(e) {
   if (action === 'processRepackagingBatchesFromTelegramChatLogs') {
     return processRepackagingBatchesFromTelegramChatLogs_();
   }
+  if (action === 'processPostRepackagingCleanup') {
+    return processPostRepackagingCleanup_();
+  }
   return jsonResponse_({
     ok: true,
     service: 'repackaging-currency-ingest',
     schema_version: 2,
-    hint: 'GET ?action=processRepackagingBatchesFromTelegramChatLogs to scan Telegram Chat Logs for [REPACKAGING BATCH EVENT] rows (Edgar-driven flow). Legacy direct POSTs still work: POST JSON { token, request_id, event, holder_key, holder_label, inputs[], outputs[], totals, raw_request_text, composition, conversion_proof? }.',
+    hint: 'GET ?action=processRepackagingBatchesFromTelegramChatLogs to scan Telegram Chat Logs for [REPACKAGING BATCH EVENT] rows (Edgar-driven flow). GET ?action=processPostRepackagingCleanup to process [POST-REPACKAGING CLEANUP EVENT] rows. Legacy direct POSTs still work: POST JSON { token, request_id, event, holder_key, holder_label, inputs[], outputs[], totals, raw_request_text, composition, conversion_proof? }.',
   });
 }
 
@@ -711,4 +714,329 @@ function publishCurrenciesJsonToGitHub_(currencyList) {
     };
   }
   return r;
+}
+
+
+/**
+ * Process [POST-REPACKAGING CLEANUP EVENT] rows from Telegram Chat Logs.
+ *
+ * Scans Telegram Chat Logs for rows where column B contains
+ * "[POST-REPACKAGING CLEANUP EVENT]" and column N (STATUS) is empty or "NEW".
+ * For each matching row:
+ *   1. Parse the event payload (Composition URL, Holder Name, flags)
+ *   2. Fetch composition JSON from the URL
+ *   3. Deplete consumed inputs from offchain asset location
+ *   4. Add output rows to offchain asset location
+ *   5. Set Currencies metadata (C=TRUE, E-J farm info, M SKU ID)
+ *   6. Optionally rebuild store-inventory.json
+ *   7. Mark row as processed
+ *
+ * Called via: GET ?action=processPostRepackagingCleanup
+ */
+function processPostRepackagingCleanup_() {
+  var log = [];
+  var errors = [];
+  var processedCount = 0;
+  
+  try {
+    // --- Config ---
+    var opsId = getProp_(SCRIPT_PROP_OPS_SS, DEFAULT_OPS_SPREADSHEET_ID);
+    var mainId = getProp_(SCRIPT_PROP_MAIN_SS, DEFAULT_MAIN_SPREADSHEET_ID);
+    var logsSheetName = getProp_(SCRIPT_PROP_SHEET_LOGS, DEFAULT_SHEET_LOGS);
+    var curSheetName = getProp_(SCRIPT_PROP_SHEET_CUR, DEFAULT_SHEET_CUR);
+    
+    var opsSs = SpreadsheetApp.openById(opsId);
+    var mainSs = SpreadsheetApp.openById(mainId);
+    
+    // --- Step 1: Find unprocessed rows in Telegram Chat Logs ---
+    var logsSheet = opsSs.getSheetByName(logsSheetName);
+    if (!logsSheet) {
+      return jsonResponse_({ ok: false, error: 'Sheet not found: ' + logsSheetName });
+    }
+    
+    var allData = logsSheet.getDataRange().getValues();
+    if (allData.length < 2) {
+      return jsonResponse_({ ok: true, processed: 0, message: 'No data rows in Telegram Chat Logs' });
+    }
+    
+    // Column indices (0-based): B=1 (message text), N=13 (STATUS)
+    var TEXT_COL = 1;
+    var STATUS_COL = 13;
+    
+    // Find rows containing [POST-REPACKAGING CLEANUP EVENT] with empty/NEW status
+    var rowsToProcess = [];
+    for (var i = 1; i < allData.length; i++) {
+      var text = String(allData[i][TEXT_COL] || '').trim();
+      var status = String(allData[i][STATUS_COL] || '').trim();
+      if (text.indexOf('[POST-REPACKAGING CLEANUP EVENT]') !== -1) {
+        if (status === '' || status.toUpperCase() === 'NEW') {
+          rowsToProcess.push({ rowIndex: i + 1, text: text, rowData: allData[i] });
+        }
+      }
+    }
+    
+    if (rowsToProcess.length === 0) {
+      return jsonResponse_({ ok: true, processed: 0, message: 'No unprocessed [POST-REPACKAGING CLEANUP EVENT] rows found' });
+    }
+    
+    // --- Process each row ---
+    for (var r = 0; r < rowsToProcess.length; r++) {
+      var row = rowsToProcess[r];
+      var rowLog = [];
+      var rowErrors = [];
+      
+      try {
+        // Parse event payload from text
+        var payload = parsePostRepackagingCleanupPayload_(row.text);
+        if (!payload) {
+          rowErrors.push('Could not parse event payload from row ' + row.rowIndex);
+          errors.push('Row ' + row.rowIndex + ': parse failed');
+          continue;
+        }
+        
+        var compositionUrl = payload['Composition URL'];
+        var holderName = payload['Holder Name'];
+        var farmName = payload['Farm Name'] || '';
+        var state = payload['State'] || '';
+        var country = payload['Country'] || '';
+        var year = payload['Year'] || '';
+        var landingPage = payload['Landing Page'] || '';
+        var ledgerUrl = payload['Ledger URL'] || '';
+        var skuMappingJson = payload['SKU Mapping'] || '';
+        var depleteInputs = (payload['Deplete Inputs'] || 'true').toLowerCase() !== 'false';
+        var addOutputLocations = (payload['Add Output Locations'] || 'true').toLowerCase() !== 'false';
+        var setCurrenciesMeta = (payload['Set Currencies Metadata'] || 'true').toLowerCase() !== 'false';
+        var rebuildInventory = (payload['Rebuild Inventory'] || 'false').toLowerCase() === 'true';
+        
+        if (!compositionUrl || !holderName) {
+          rowErrors.push('Missing required fields: Composition URL and Holder Name');
+          errors.push('Row ' + row.rowIndex + ': missing required fields');
+          continue;
+        }
+        
+        // --- Step 2: Fetch composition JSON ---
+        var composition;
+        try {
+          var resp = UrlFetchApp.fetch(compositionUrl, { muteHttpExceptions: true });
+          if (resp.getResponseCode() !== 200) {
+            rowErrors.push('Failed to fetch composition JSON: HTTP ' + resp.getResponseCode());
+            errors.push('Row ' + row.rowIndex + ': fetch failed HTTP ' + resp.getResponseCode());
+            continue;
+          }
+          composition = JSON.parse(resp.getContentText());
+        } catch (fetchErr) {
+          rowErrors.push('Fetch/parse error: ' + fetchErr.message);
+          errors.push('Row ' + row.rowIndex + ': fetch error - ' + fetchErr.message);
+          continue;
+        }
+        
+        if (!composition.inputs || !composition.outputs) {
+          rowErrors.push('Invalid composition JSON: missing inputs or outputs arrays');
+          errors.push('Row ' + row.rowIndex + ': invalid composition schema');
+          continue;
+        }
+        
+        // --- Step 3: Deplete inputs ---
+        if (depleteInputs) {
+          var assetSheet = mainSs.getSheetByName('offchain asset location');
+          if (assetSheet) {
+            var assetData = assetSheet.getDataRange().getValues();
+            for (var inp = 0; inp < composition.inputs.length; inp++) {
+              var input = composition.inputs[inp];
+              if (input.line_kind !== 'from_holder_inventory') {
+                rowLog.push('Skipped input (not from_holder_inventory): ' + (input.currency || 'unknown'));
+                continue;
+              }
+              var currency = input.currency;
+              var qty = parseFloat(input.quantity) || 0;
+              if (qty <= 0) continue;
+              
+              // Find row where col A == currency AND col B == holderName
+              for (var a = 1; a < assetData.length; a++) {
+                if (String(assetData[a][0] || '').trim() === String(currency).trim() &&
+                    String(assetData[a][1] || '').trim() === String(holderName).trim()) {
+                  var currentAmount = parseFloat(assetData[a][2]) || 0;
+                  var newAmount = Math.max(0, currentAmount - qty);
+                  if (newAmount !== currentAmount) {
+                    assetSheet.getRange(a + 1, 3).setValue(newAmount);
+                    rowLog.push('Depleted ' + currency + ' from ' + currentAmount + ' to ' + newAmount + ' (consumed ' + qty + ')');
+                  } else {
+                    rowLog.push('Skipped depletion for ' + currency + ': already 0 or unchanged');
+                  }
+                  break;
+                }
+              }
+            }
+          } else {
+            rowErrors.push('offchain asset location sheet not found');
+          }
+        }
+        
+        // --- Step 4: Add output locations ---
+        if (addOutputLocations) {
+          var assetSheet2 = mainSs.getSheetByName('offchain asset location');
+          if (assetSheet2) {
+            var assetData2 = assetSheet2.getDataRange().getValues();
+            for (var out = 0; out < composition.outputs.length; out++) {
+              var output = composition.outputs[out];
+              var suggestedCurrency = output.suggested_currency;
+              var units = parseFloat(output.units) || 0;
+              var unitCost = parseFloat(output.unit_cost_usd) || 0;
+              var totalValue = parseFloat(output.line_total_usd) || 0;
+              
+              // Check if row already exists (idempotent)
+              var exists = false;
+              for (var a2 = 1; a2 < assetData2.length; a2++) {
+                if (String(assetData2[a2][0] || '').trim() === String(suggestedCurrency).trim() &&
+                    String(assetData2[a2][1] || '').trim() === String(holderName).trim()) {
+                  exists = true;
+                  rowLog.push('Skipped output ' + suggestedCurrency + ': already exists');
+                  break;
+                }
+              }
+              
+              if (!exists && units > 0) {
+                assetSheet2.appendRow([suggestedCurrency, holderName, units, unitCost, totalValue]);
+                rowLog.push('Added output: ' + suggestedCurrency + ' x' + units + ' @ $' + unitCost);
+              }
+            }
+          }
+        }
+        
+        // --- Step 5: Set Currencies metadata ---
+        if (setCurrenciesMeta) {
+          var curSheet = mainSs.getSheetByName(curSheetName);
+          if (curSheet) {
+            var curData = curSheet.getDataRange().getValues();
+            for (var out2 = 0; out2 < composition.outputs.length; out2++) {
+              var output2 = composition.outputs[out2];
+              var suggestedCurrency2 = output2.suggested_currency;
+              
+              for (var c = 1; c < curData.length; c++) {
+                if (String(curData[c][0] || '').trim() === String(suggestedCurrency2).trim()) {
+                  var rowNum = c + 1;
+                  // Col C (index 2): Serializable
+                  var colC = String(curData[c][2] || '').trim();
+                  if (colC === '' || colC.toUpperCase() === 'FALSE') {
+                    curSheet.getRange(rowNum, 3).setValue('TRUE');
+                    rowLog.push('Currencies[' + suggestedCurrency2 + '] C: set Serializable=TRUE');
+                  }
+                  // Col E (index 4): landing_page
+                  if (landingPage && !String(curData[c][4] || '').trim()) {
+                    curSheet.getRange(rowNum, 5).setValue(landingPage);
+                    rowLog.push('Currencies[' + suggestedCurrency2 + '] E: set landing_page');
+                  }
+                  // Col F (index 5): ledger
+                  if (ledgerUrl && !String(curData[c][5] || '').trim()) {
+                    curSheet.getRange(rowNum, 6).setValue(ledgerUrl);
+                    rowLog.push('Currencies[' + suggestedCurrency2 + '] F: set ledger');
+                  }
+                  // Col G (index 6): farm name
+                  if (farmName && !String(curData[c][6] || '').trim()) {
+                    curSheet.getRange(rowNum, 7).setValue(farmName);
+                    rowLog.push('Currencies[' + suggestedCurrency2 + '] G: set farm name');
+                  }
+                  // Col H (index 7): state
+                  if (state && !String(curData[c][7] || '').trim()) {
+                    curSheet.getRange(rowNum, 8).setValue(state);
+                    rowLog.push('Currencies[' + suggestedCurrency2 + '] H: set state');
+                  }
+                  // Col I (index 8): country
+                  if (country && !String(curData[c][8] || '').trim()) {
+                    curSheet.getRange(rowNum, 9).setValue(country);
+                    rowLog.push('Currencies[' + suggestedCurrency2 + '] I: set country');
+                  }
+                  // Col J (index 9): year
+                  if (year && !String(curData[c][9] || '').trim()) {
+                    curSheet.getRange(rowNum, 10).setValue(year);
+                    rowLog.push('Currencies[' + suggestedCurrency2 + '] J: set year');
+                  }
+                  // Col M (index 12): SKU Product ID
+                  if (skuMappingJson) {
+                    var skuId = resolveSkuId_(suggestedCurrency2, skuMappingJson);
+                    if (skuId && !String(curData[c][12] || '').trim()) {
+                      curSheet.getRange(rowNum, 13).setValue(skuId);
+                      rowLog.push('Currencies[' + suggestedCurrency2 + '] M: set SKU=' + skuId);
+                    }
+                  }
+                  break;
+                }
+              }
+            }
+          } else {
+            rowErrors.push('Currencies sheet not found');
+          }
+        }
+        
+        // --- Step 6: Mark row as processed ---
+        logsSheet.getRange(row.rowIndex, STATUS_COL + 1).setValue('PROCESSED');
+        processedCount++;
+        
+      } catch (rowErr) {
+        rowErrors.push('Unexpected error: ' + rowErr.message);
+        errors.push('Row ' + row.rowIndex + ': ' + rowErr.message);
+      }
+      
+      log.push({ row: row.rowIndex, messages: rowLog, errors: rowErrors });
+    }
+    
+    return jsonResponse_({
+      ok: true,
+      processed: processedCount,
+      totalFound: rowsToProcess.length,
+      log: log,
+      errors: errors.length > 0 ? errors : undefined,
+    });
+    
+  } catch (err) {
+    return jsonResponse_({ ok: false, error: err.message, log: log, errors: errors });
+  }
+}
+
+/**
+ * Parse a [POST-REPACKAGING CLEANUP EVENT] payload from Telegram Chat Log text.
+ * Returns an object mapping label to value.
+ */
+function parsePostRepackagingCleanupPayload_(text) {
+  if (!text) return null;
+  var payload = {};
+  var lines = text.split('\n');
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i].trim();
+    var match = line.match(/^\-\s*(.+?)\s*:\s*(.*)$/);
+    if (match) {
+      payload[match[1].trim()] = match[2].trim();
+    }
+  }
+  return payload;
+}
+
+/**
+ * Resolve SKU ID by substring-matching suggested_currency against the SKU Mapping JSON.
+ */
+function resolveSkuId_(suggestedCurrency, skuMappingJson) {
+  if (!skuMappingJson || !suggestedCurrency) return null;
+  try {
+    var mapping = JSON.parse(skuMappingJson);
+    var keys = Object.keys(mapping);
+    for (var i = 0; i < keys.length; i++) {
+      if (suggestedCurrency.indexOf(keys[i]) !== -1) {
+        return mapping[keys[i]];
+      }
+    }
+  } catch (e) {
+    Logger.log('SKU Mapping parse error: ' + e.message);
+  }
+  return null;
+}
+
+/**
+ * Public wrapper so the scan can be run from the Apps Script editor dropdown.
+ */
+function runPostRepackagingCleanup() {
+  var res = processPostRepackagingCleanup_();
+  try {
+    Logger.log(res.getContent());
+  } catch (ignore) {}
+  return res;
 }
