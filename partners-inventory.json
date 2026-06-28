@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T09:06:58.000Z",
+  "generatedAt": "2026-06-28T09:34:31.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -156,9 +156,9 @@
         },
         {
           "productId": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
-          "inventory": 2,
-          "venueInventory": 2,
-          "onlineInventory": 2,
+          "inventory": 1,
+          "venueInventory": 1,
+          "onlineInventory": 1,
           "availableOnline": true,
           "productName": "Ceremonial Cacao \u2013 Fazenda Santa Ana, Bahia Brazil, 2023 (200g)",
           "priceUsd": "$25.00",
@@ -194,7 +194,7 @@
           "productId": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
           "inventory": 15,
           "venueInventory": 15,
-          "onlineInventory": 2,
+          "onlineInventory": 1,
           "availableOnline": true,
           "productName": "Ceremonial Cacao \u2013 Fazenda Santa Ana, Bahia Brazil, 2023 (200g)",
           "priceUsd": "$25.00",
