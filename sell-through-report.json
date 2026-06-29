@@ -1,19 +1,25 @@
 {
-  "generated_at": "2026-06-22T12:38:01.000Z",
+  "generated_at": "2026-06-29T11:35:18.000Z",
   "source": "sync_sell_through_report",
   "summary": {
     "total_usa_partners": 18,
     "active_partners": 12,
-    "total_inventory_units": 129.0,
-    "total_sales_monthly": 18.917,
+    "total_inventory_units": 125.0,
+    "total_sales_monthly": 19.834,
     "partners_low_stock": 3
   },
   "by_inventory_type": {
     "Cacao Mass": {
       "total_inventory": 100.0,
-      "total_sales_monthly": 12.667,
+      "total_sales_monthly": 12.917,
       "partner_count": 14,
       "sku_count": 3
+    },
+    "Cacao Nib": {
+      "total_inventory": 16.0,
+      "total_sales_monthly": 2.083,
+      "partner_count": 6,
+      "sku_count": 1
     },
     "Caramelized Cacao Bean": {
       "total_inventory": 5.0,
@@ -22,19 +28,36 @@
       "sku_count": 1
     },
     "Chocolate Bar": {
-      "total_inventory": 0.0,
-      "total_sales_monthly": 3.583,
+      "total_inventory": 4.0,
+      "total_sales_monthly": 4.167,
       "partner_count": 1,
       "sku_count": 2
-    },
-    "Cacao Nib": {
-      "total_inventory": 24.0,
-      "total_sales_monthly": 2.0,
-      "partner_count": 6,
-      "sku_count": 1
     }
   },
   "partners": [
+    {
+      "partner_id": "soha",
+      "partner_name": "SOHA - Sanctuary of Healing Arts",
+      "location": "Philomath, Oregon",
+      "partner_type": "Wholesale",
+      "inventory_units": 0.0,
+      "sales_monthly": 5.0,
+      "weeks_of_stock": 0.0,
+      "items": [
+        {
+          "sku": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory_type": "Cacao Mass",
+          "sales_monthly": 3.583,
+          "inventory_units": 0.0
+        },
+        {
+          "sku": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
+          "inventory_type": "Cacao Mass",
+          "sales_monthly": 1.417,
+          "inventory_units": 0.0
+        }
+      ]
+    },
     {
       "partner_id": "prism-percussions",
       "partner_name": "Prism Percussions",
@@ -59,29 +82,6 @@
       ]
     },
     {
-      "partner_id": "soha",
-      "partner_name": "SOHA - Sanctuary of Healing Arts",
-      "location": "Philomath, Oregon",
-      "partner_type": "Wholesale",
-      "inventory_units": 0.0,
-      "sales_monthly": 5.0,
-      "weeks_of_stock": 0.0,
-      "items": [
-        {
-          "sku": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
-          "inventory_type": "Cacao Mass",
-          "sales_monthly": 1.417,
-          "inventory_units": 0.0
-        },
-        {
-          "sku": "oscar-bahia-ceremonial-cacao-200g",
-          "inventory_type": "Cacao Mass",
-          "sales_monthly": 3.583,
-          "inventory_units": 0.0
-        }
-      ]
-    },
-    {
       "partner_id": "green-gulch-farm-zen-center",
       "partner_name": "Green Gulch Farm Zen Center",
       "location": "Marin County, California",
@@ -91,27 +91,27 @@
       "weeks_of_stock": 0.0,
       "items": [
         {
-          "sku": "taste-of-rainforest-caramelized-cacao-beans",
-          "inventory_type": "Caramelized Cacao Bean",
-          "sales_monthly": 0.5,
-          "inventory_units": 0.0
-        },
-        {
           "sku": "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g",
           "inventory_type": "Cacao Mass",
           "sales_monthly": 0.25,
           "inventory_units": 0.0
         },
         {
-          "sku": "oscar-bahia-ceremonial-cacao-200g",
-          "inventory_type": "Cacao Mass",
-          "sales_monthly": 0.25,
+          "sku": "taste-of-rainforest-caramelized-cacao-beans",
+          "inventory_type": "Caramelized Cacao Bean",
+          "sales_monthly": 0.5,
           "inventory_units": 0.0
         },
         {
           "sku": "8-ounce-organic-cacao-nibs",
           "inventory_type": "Cacao Nib",
           "sales_monthly": 0.5,
+          "inventory_units": 0.0
+        },
+        {
+          "sku": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory_type": "Cacao Mass",
+          "sales_monthly": 0.25,
           "inventory_units": 0.0
         }
       ]
@@ -121,16 +121,10 @@
       "partner_name": "Kiki's Cocoa",
       "location": "San Francisco, California",
       "partner_type": "Operator",
-      "inventory_units": 13.0,
-      "sales_monthly": 6.75,
-      "weeks_of_stock": 8.3,
+      "inventory_units": 9.0,
+      "sales_monthly": 7.667,
+      "weeks_of_stock": 5.1,
       "items": [
-        {
-          "sku": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
-          "inventory_type": "Cacao Mass",
-          "sales_monthly": 0.167,
-          "inventory_units": 2.0
-        },
         {
           "sku": "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g",
           "inventory_type": "Cacao Mass",
@@ -144,28 +138,34 @@
           "inventory_units": 0.0
         },
         {
-          "sku": "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024",
-          "inventory_type": "Chocolate Bar",
-          "sales_monthly": 1.917,
-          "inventory_units": 0.0
-        },
-        {
-          "sku": "oscar-bahia-ceremonial-cacao-200g",
+          "sku": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
           "inventory_type": "Cacao Mass",
-          "sales_monthly": 1.667,
-          "inventory_units": 0.0
+          "sales_monthly": 0.25,
+          "inventory_units": 1.0
         },
         {
           "sku": "8-ounce-organic-cacao-nibs",
           "inventory_type": "Cacao Nib",
-          "sales_monthly": 0.917,
-          "inventory_units": 11.0
+          "sales_monthly": 1.0,
+          "inventory_units": 3.0
+        },
+        {
+          "sku": "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024",
+          "inventory_type": "Chocolate Bar",
+          "sales_monthly": 2.5,
+          "inventory_units": 4.0
         },
         {
           "sku": "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023",
           "inventory_type": "Chocolate Bar",
           "sales_monthly": 1.667,
           "inventory_units": 0.0
+        },
+        {
+          "sku": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory_type": "Cacao Mass",
+          "sales_monthly": 1.833,
+          "inventory_units": 1.0
         }
       ]
     },
@@ -236,16 +236,16 @@
       "weeks_of_stock": 69.3,
       "items": [
         {
-          "sku": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
-          "inventory_type": "Cacao Mass",
-          "sales_monthly": 0.333,
-          "inventory_units": 15.0
-        },
-        {
           "sku": "oscar-bahia-ceremonial-cacao-200g",
           "inventory_type": "Cacao Mass",
           "sales_monthly": 0.667,
           "inventory_units": 1.0
+        },
+        {
+          "sku": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
+          "inventory_type": "Cacao Mass",
+          "sales_monthly": 0.333,
+          "inventory_units": 15.0
         }
       ]
     },
@@ -324,11 +324,11 @@
       ]
     },
     {
-      "partner_id": "hacker-dojo",
-      "partner_name": "Hacker Dojo",
-      "location": "Mountain View, California",
+      "partner_id": "queen-hippie-gypsy",
+      "partner_name": "Queen Hippie Gypsy",
+      "location": "Downtown Oakland, California",
       "partner_type": "Consignment",
-      "inventory_units": 5.0,
+      "inventory_units": 8.0,
       "sales_monthly": 0.0,
       "weeks_of_stock": null,
       "items": [
@@ -336,24 +336,7 @@
           "sku": "oscar-bahia-ceremonial-cacao-200g",
           "inventory_type": "Cacao Mass",
           "sales_monthly": 0.0,
-          "inventory_units": 5.0
-        }
-      ]
-    },
-    {
-      "partner_id": "embodied-blindfold-dance",
-      "partner_name": "Embodied Blindfold Dance",
-      "location": "Eugene, Oregon",
-      "partner_type": "Consignment",
-      "inventory_units": 5.0,
-      "sales_monthly": 0.0,
-      "weeks_of_stock": null,
-      "items": [
-        {
-          "sku": "8-ounce-organic-cacao-nibs",
-          "inventory_type": "Cacao Nib",
-          "sales_monthly": 0.0,
-          "inventory_units": 5.0
+          "inventory_units": 8.0
         }
       ]
     },
@@ -375,40 +358,6 @@
       ]
     },
     {
-      "partner_id": "the-enchanted-forest-boutique",
-      "partner_name": "The Enchanted Forest Boutique",
-      "location": "Chico, California",
-      "partner_type": "Consignment",
-      "inventory_units": 10.0,
-      "sales_monthly": 0.0,
-      "weeks_of_stock": null,
-      "items": [
-        {
-          "sku": "oscar-bahia-ceremonial-cacao-200g",
-          "inventory_type": "Cacao Mass",
-          "sales_monthly": 0.0,
-          "inventory_units": 10.0
-        }
-      ]
-    },
-    {
-      "partner_id": "queen-hippie-gypsy",
-      "partner_name": "Queen Hippie Gypsy",
-      "location": "Downtown Oakland, California",
-      "partner_type": "Consignment",
-      "inventory_units": 8.0,
-      "sales_monthly": 0.0,
-      "weeks_of_stock": null,
-      "items": [
-        {
-          "sku": "oscar-bahia-ceremonial-cacao-200g",
-          "inventory_type": "Cacao Mass",
-          "sales_monthly": 0.0,
-          "inventory_units": 8.0
-        }
-      ]
-    },
-    {
       "partner_id": "republic-cafe-and-ming-lounge",
       "partner_name": "Republic Cafe and Ming Lounge",
       "location": "Portland, Oregon",
@@ -422,6 +371,57 @@
           "inventory_type": "Cacao Nib",
           "sales_monthly": 0.0,
           "inventory_units": 3.0
+        }
+      ]
+    },
+    {
+      "partner_id": "embodied-blindfold-dance",
+      "partner_name": "Embodied Blindfold Dance",
+      "location": "Eugene, Oregon",
+      "partner_type": "Consignment",
+      "inventory_units": 5.0,
+      "sales_monthly": 0.0,
+      "weeks_of_stock": null,
+      "items": [
+        {
+          "sku": "8-ounce-organic-cacao-nibs",
+          "inventory_type": "Cacao Nib",
+          "sales_monthly": 0.0,
+          "inventory_units": 5.0
+        }
+      ]
+    },
+    {
+      "partner_id": "hacker-dojo",
+      "partner_name": "Hacker Dojo",
+      "location": "Mountain View, California",
+      "partner_type": "Consignment",
+      "inventory_units": 5.0,
+      "sales_monthly": 0.0,
+      "weeks_of_stock": null,
+      "items": [
+        {
+          "sku": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory_type": "Cacao Mass",
+          "sales_monthly": 0.0,
+          "inventory_units": 5.0
+        }
+      ]
+    },
+    {
+      "partner_id": "the-enchanted-forest-boutique",
+      "partner_name": "The Enchanted Forest Boutique",
+      "location": "Chico, California",
+      "partner_type": "Consignment",
+      "inventory_units": 10.0,
+      "sales_monthly": 0.0,
+      "weeks_of_stock": null,
+      "items": [
+        {
+          "sku": "oscar-bahia-ceremonial-cacao-200g",
+          "inventory_type": "Cacao Mass",
+          "sales_monthly": 0.0,
+          "inventory_units": 10.0
         }
       ]
     }
