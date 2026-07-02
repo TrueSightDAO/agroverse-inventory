@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-02T06:28:54.250Z",
-  "source": "update_store_inventory",
+  "generatedAt": "2026-07-02T06:44:05.000Z",
+  "source": "sync_agroverse_store_inventory",
   "inventory": {
     "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": 0,
     "taste-of-rainforest-caramelized-cacao-beans": 0,

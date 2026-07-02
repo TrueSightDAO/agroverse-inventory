@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T10:16:43.000Z",
+  "generatedAt": "2026-07-02T06:44:05.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -170,9 +170,9 @@
         },
         {
           "productId": "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024",
-          "inventory": 8,
-          "venueInventory": 8,
-          "onlineInventory": 8,
+          "inventory": 1,
+          "venueInventory": 1,
+          "onlineInventory": 1,
           "availableOnline": true,
           "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Oscar's Farm, Bahia Brazil, 2024",
           "priceUsd": "10",
