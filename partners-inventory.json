@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T09:02:43.000Z",
+  "generatedAt": "2026-07-05T09:24:31.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -306,38 +306,6 @@
           "farm": "Oscar",
           "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
-        }
-      ]
-    },
-    "rhythm-and-stones": {
-      "items": [
-        {
-          "productId": "oscar-bahia-ceremonial-cacao-200g",
-          "inventory": 3,
-          "venueInventory": 3,
-          "onlineInventory": 0,
-          "availableOnline": false,
-          "productName": "Ceremonial Cacao \u2013 Oscar",
-          "priceUsd": "$25.00",
-          "category": "retail",
-          "shipment": "AGL4",
-          "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
-          "gtin": "860010660232"
-        },
-        {
-          "productId": "taste-of-rainforest-caramelized-cacao-beans",
-          "inventory": 1,
-          "venueInventory": 1,
-          "onlineInventory": 0,
-          "availableOnline": false,
-          "productName": "Taste of Rainforest - 200 grams Caramelized Cacao Beans",
-          "priceUsd": "$25.00",
-          "category": "retail",
-          "shipment": "AGL10",
-          "farm": "Capela Velha Fazenda",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/taste-of-rainforest.jpeg",
-          "gtin": "860010660249"
         }
       ]
     },
