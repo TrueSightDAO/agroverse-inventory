@@ -49,6 +49,7 @@ var SCRIPT_PROP_MAIN_SS = 'REPACKAGING_MAIN_SPREADSHEET_ID';
 var SCRIPT_PROP_SHEET_LOGS = 'SHEET_TELEGRAM_CHAT_LOGS';
 var SCRIPT_PROP_SHEET_CC = 'SHEET_CURRENCY_CREATION';
 var SCRIPT_PROP_SHEET_CUR = 'SHEET_CURRENCIES';
+var SCRIPT_PROP_SHEET_SETTLEMENT = 'SHEET_REPACKAGING_SETTLEMENT';
 var SCRIPT_PROP_CURRENCIES_UNIT_COST_COL = 'CURRENCIES_UNIT_COST_USD_COLUMN';
 var SCRIPT_PROP_CURRENCIES_RAW_REQ_COL = 'CURRENCIES_RAW_REQUEST_COLUMN';
 var SCRIPT_PROP_CURRENCIES_COMP_URL_COL = 'CURRENCIES_COMPOSITION_JSON_URL_COLUMN';
@@ -58,6 +59,7 @@ var DEFAULT_MAIN_SPREADSHEET_ID = '1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU'
 var DEFAULT_SHEET_LOGS = 'Telegram Chat Logs';
 var DEFAULT_SHEET_CC = 'Currency Creation';
 var DEFAULT_SHEET_CUR = 'Currencies';
+var DEFAULT_SHEET_SETTLEMENT = 'Repackaging Settlement';
 var DEFAULT_GH_PATH = 'currencies.json';
 var DEFAULT_COMPOSITIONS_DIR = 'currency-compositions';
 var DEFAULT_CURRENCIES_UNIT_COST_COL = 2;
@@ -102,7 +104,7 @@ function doGet(e) {
     ok: true,
     service: 'repackaging-currency-ingest',
     schema_version: 2,
-    hint: 'GET ?action=processRepackagingBatchesFromTelegramChatLogs to scan Telegram Chat Logs for [REPACKAGING BATCH EVENT] rows (Edgar-driven flow). GET ?action=processPostRepackagingCleanup to process [POST-REPACKAGING CLEANUP EVENT] rows. Legacy direct POSTs still work: POST JSON { token, request_id, event, holder_key, holder_label, inputs[], outputs[], totals, raw_request_text, composition, conversion_proof? }.',
+    hint: 'GET ?action=processRepackagingBatchesFromTelegramChatLogs to scan Telegram Chat Logs for [REPACKAGING BATCH EVENT] rows (Edgar-driven flow). GET ?action=processPostRepackagingCleanup to process [REPACKAGING SETTLEMENT EVENT] rows. Legacy direct POSTs still work: POST JSON { token, request_id, event, holder_key, holder_label, inputs[], outputs[], totals, raw_request_text, composition, conversion_proof? }.',
   });
 }
 
@@ -160,6 +162,63 @@ function _installCurrencyCreationHeader_(force) {
   sh.setFrozenRows(1);
 
   return { ok: true, changed: true, headers: headers, force: !!force };
+}
+
+/**
+ * Install a header row on "Repackaging Settlement" tab on the ops sheet.
+ * Columns: Created At, Request ID, Holder Name, Composition URL, Farm Name,
+ *          State, Country, Year, Landing Page, Ledger URL, Inputs Depleted,
+ *          Outputs Added Count, SKU Mapping, Telegram Log Row, Result Log
+ */
+function installRepackagingSettlementHeader() {
+  return _installRepackagingSettlementHeader_(false);
+}
+function installRepackagingSettlementHeaderForce() {
+  return _installRepackagingSettlementHeader_(true);
+}
+function _installRepackagingSettlementHeader_(force) {
+  var opsId = getProp_(SCRIPT_PROP_OPS_SS, DEFAULT_OPS_SPREADSHEET_ID);
+  var shName = getProp_(SCRIPT_PROP_SHEET_SETTLEMENT, DEFAULT_SHEET_SETTLEMENT);
+  var opsSs = SpreadsheetApp.openById(opsId);
+  var sh = opsSs.getSheetByName(shName);
+  if (!sh) {
+    sh = opsSs.insertSheet(shName);
+  }
+  var headers = [
+    'Created At', 'Request ID', 'Holder Name', 'Composition URL', 'Farm Name',
+    'State', 'Country', 'Year', 'Landing Page', 'Ledger URL',
+    'Inputs Depleted', 'Outputs Added Count', 'SKU Mapping', 'Telegram Log Row', 'Result Log'
+  ];
+  var firstRow = sh.getRange(1, 1, 1, headers.length).getValues()[0];
+  var hasExistingHeader = firstRow.some(function (v) { return String(v || '').trim() !== ''; });
+  if (hasExistingHeader && !force) {
+    return { ok: true, changed: false, existing: firstRow };
+  }
+  if (hasExistingHeader && force) sh.insertRowBefore(1);
+  sh.getRange(1, 1, 1, headers.length).setValues([headers]).setFontWeight('bold');
+  sh.setFrozenRows(1);
+  return { ok: true, changed: true, headers: headers };
+}
+
+function _appendSettlementRecord_(requestId, holderName, compositionUrl, farmName, state, country,
+                                   year, landingPage, ledgerUrl, inputsDepletedCount,
+                                   outputsCount, skuMappingJson, telegramRowIndex, resultLog) {
+  var opsId = getProp_(SCRIPT_PROP_OPS_SS, DEFAULT_OPS_SPREADSHEET_ID);
+  var shName = getProp_(SCRIPT_PROP_SHEET_SETTLEMENT, DEFAULT_SHEET_SETTLEMENT);
+  var opsSs = SpreadsheetApp.openById(opsId);
+  var sh = opsSs.getSheetByName(shName);
+  if (!sh) {
+    _installRepackagingSettlementHeader_(false);
+    sh = opsSs.getSheetByName(shName);
+    if (!sh) throw new Error('Could not create sheet: ' + shName);
+  }
+  var row = [
+    new Date().toISOString(), requestId, holderName, compositionUrl,
+    farmName, state, country, year, landingPage, ledgerUrl,
+    inputsDepletedCount, outputsCount, skuMappingJson, telegramRowIndex,
+    JSON.stringify(resultLog)
+  ];
+  sh.appendRow(row);
 }
 
 /**
@@ -759,16 +818,17 @@ function processPostRepackagingCleanup_() {
       return jsonResponse_({ ok: true, processed: 0, message: 'No data rows in Telegram Chat Logs' });
     }
     
-    // Column indices (0-based): B=1 (message text), N=13 (STATUS)
-    var TEXT_COL = 1;
-    var STATUS_COL = 13;
+    // Column indices (0-based): G=6 (submitted text, same convention as batch handler),
+    // R=17 (dedup marker — PROCESSED:REPACKAGING_SETTLEMENT)
+    var TEXT_COL = 6;
+    var STATUS_COL = 17;
     
-    // Find rows containing [POST-REPACKAGING CLEANUP EVENT] with empty/NEW status
+    // Find rows containing [REPACKAGING SETTLEMENT EVENT] with empty STATUS column
     var rowsToProcess = [];
     for (var i = 1; i < allData.length; i++) {
       var text = String(allData[i][TEXT_COL] || '').trim();
       var status = String(allData[i][STATUS_COL] || '').trim();
-      if (text.indexOf('[POST-REPACKAGING CLEANUP EVENT]') !== -1) {
+      if (text.indexOf('[REPACKAGING SETTLEMENT EVENT]') !== -1) {
         if (status === '' || status.toUpperCase() === 'NEW') {
           rowsToProcess.push({ rowIndex: i + 1, text: text, rowData: allData[i] });
         }
@@ -776,7 +836,7 @@ function processPostRepackagingCleanup_() {
     }
     
     if (rowsToProcess.length === 0) {
-      return jsonResponse_({ ok: true, processed: 0, message: 'No unprocessed [POST-REPACKAGING CLEANUP EVENT] rows found' });
+      return jsonResponse_({ ok: true, processed: 0, message: 'No unprocessed [REPACKAGING SETTLEMENT EVENT] rows found' });
     }
     
     // --- Process each row ---
@@ -968,8 +1028,14 @@ function processPostRepackagingCleanup_() {
           }
         }
         
-        // --- Step 6: Mark row as processed ---
-        logsSheet.getRange(row.rowIndex, STATUS_COL + 1).setValue('PROCESSED');
+        // --- Step 6: Mark row as processed (col R dedup marker, matches production) ---
+        var requestId = composition.request_id || (compositionUrl && compositionUrl.split('/').pop().replace('.json','')) || 'unknown';
+        _appendSettlementRecord_(requestId, holderName, compositionUrl, farmName, state, country,
+                                 year, landingPage, ledgerUrl,
+                                 (composition.inputs || []).length,
+                                 (composition.outputs || []).length,
+                                 skuMappingJson, row.rowIndex, { log: rowLog, errors: rowErrors });
+        logsSheet.getRange(row.rowIndex, STATUS_COL + 1).setValue('PROCESSED:REPACKAGING_SETTLEMENT');
         processedCount++;
         
       } catch (rowErr) {
@@ -994,7 +1060,7 @@ function processPostRepackagingCleanup_() {
 }
 
 /**
- * Parse a [POST-REPACKAGING CLEANUP EVENT] payload from Telegram Chat Log text.
+ * Parse a [REPACKAGING SETTLEMENT EVENT] payload from Telegram Chat Log text.
  * Returns an object mapping label to value.
  */
 function parsePostRepackagingCleanupPayload_(text) {
