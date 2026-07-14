@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T08:29:50.000Z",
+  "generatedAt": "2026-07-14T21:30:45.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -156,28 +156,15 @@
         },
         {
           "productId": "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024",
-          "inventory": 25,
-          "venueInventory": 25,
-          "onlineInventory": 25,
+          "inventory": 28,
+          "venueInventory": 28,
+          "onlineInventory": 28,
           "availableOnline": true,
           "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Fazenda S\u00e3o Jorge, Bahia Brazil, 2024",
           "priceUsd": "$10.00",
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Fazenda S\u00e3o Jorge",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
-        },
-        {
-          "productId": "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024",
-          "inventory": 1,
-          "venueInventory": 1,
-          "onlineInventory": 1,
-          "availableOnline": true,
-          "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Oscar's Farm, Bahia Brazil, 2024",
-          "priceUsd": "10",
-          "category": "Retail",
-          "shipment": "AGL4",
-          "farm": "Oscar's Farm, Bahia",
           "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
         }
       ]
