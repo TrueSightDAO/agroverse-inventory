@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T10:26:40.000Z",
+  "generatedAt": "2026-08-10T08:16:45.000Z",
   "source": "sync_partners_velocity",
   "windowsDays": [
     30,
@@ -10,6 +10,10 @@
     "oscar-bahia-ceremonial-cacao-200g": {
       "monthly": 0.833,
       "sample_size": 17
+    },
+    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
+      "monthly": 1.417,
+      "sample_size": 3
     },
     "8-ounce-organic-cacao-nibs": {
       "monthly": 0.667,
@@ -23,20 +27,16 @@
       "monthly": 0.333,
       "sample_size": 3
     },
-    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
-      "monthly": 1.417,
-      "sample_size": 3
-    },
-    "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
-      "monthly": 2.5,
+    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
+      "monthly": 3.333,
       "sample_size": 1
     },
     "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
       "monthly": 1.667,
       "sample_size": 1
     },
-    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
-      "monthly": 3.333,
+    "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
+      "monthly": 2.5,
       "sample_size": 1
     }
   },
@@ -285,7 +285,7 @@
           "sales_12m_monthly_avg": 0,
           "last_sale_date": null,
           "sample_size_sales": 0,
-          "restocks_30d": 30.0,
+          "restocks_30d": 5.0,
           "restocks_90d": 30.0,
           "restocks_12m_monthly_avg": 2.5,
           "last_restock_date": "2026-07-14",
@@ -533,7 +533,7 @@
       "partner_type": "Consignment",
       "items": {
         "oscar-bahia-ceremonial-cacao-200g": {
-          "sales_30d": 3.0,
+          "sales_30d": 0.0,
           "sales_90d": 3.0,
           "sales_12m_monthly_avg": 0.75,
           "last_sale_date": "2026-07-05",
@@ -545,7 +545,7 @@
           "sample_size_restocks": 9
         },
         "taste-of-rainforest-caramelized-cacao-beans": {
-          "sales_30d": 1.0,
+          "sales_30d": 0.0,
           "sales_90d": 1.0,
           "sales_12m_monthly_avg": 0.25,
           "last_sale_date": "2026-07-05",
@@ -634,7 +634,7 @@
       "items": {
         "8-ounce-organic-cacao-nibs": {
           "sales_30d": 0.0,
-          "sales_90d": 1.0,
+          "sales_90d": 0.0,
           "sales_12m_monthly_avg": 0.083,
           "last_sale_date": "2026-05-10",
           "sample_size_sales": 1,
