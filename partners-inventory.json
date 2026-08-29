@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T18:46:13.000Z",
+  "generatedAt": "2026-08-29T12:43:49.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -156,9 +156,9 @@
         },
         {
           "productId": "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024",
-          "inventory": 12,
-          "venueInventory": 12,
-          "onlineInventory": 12,
+          "inventory": 9,
+          "venueInventory": 9,
+          "onlineInventory": 9,
           "availableOnline": true,
           "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Fazenda S\u00e3o Jorge, Bahia Brazil, 2024",
           "priceUsd": "$10.00",
