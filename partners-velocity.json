@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T07:44:43.000Z",
+  "generatedAt": "2026-08-31T14:26:42.000Z",
   "source": "sync_partners_velocity",
   "windowsDays": [
     30,
@@ -7,25 +7,13 @@
     365
   ],
   "category_medians": {
-    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
-      "monthly": 1.417,
-      "sample_size": 3
+    "taste-of-rainforest-caramelized-cacao-beans": {
+      "monthly": 0.333,
+      "sample_size": 4
     },
     "oscar-bahia-ceremonial-cacao-200g": {
       "monthly": 0.75,
       "sample_size": 17
-    },
-    "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
-      "monthly": 2.5,
-      "sample_size": 1
-    },
-    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
-      "monthly": 1.667,
-      "sample_size": 1
-    },
-    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
-      "monthly": 3.333,
-      "sample_size": 1
     },
     "8-ounce-organic-cacao-nibs": {
       "monthly": 0.458,
@@ -35,9 +23,21 @@
       "monthly": 0.75,
       "sample_size": 2
     },
-    "taste-of-rainforest-caramelized-cacao-beans": {
-      "monthly": 0.333,
-      "sample_size": 4
+    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
+      "monthly": 1.417,
+      "sample_size": 3
+    },
+    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
+      "monthly": 3.333,
+      "sample_size": 1
+    },
+    "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
+      "monthly": 2.5,
+      "sample_size": 1
+    },
+    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
+      "monthly": 1.667,
+      "sample_size": 1
     }
   },
   "partners": {
@@ -280,11 +280,11 @@
           "sample_size_restocks": 0
         },
         "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
-          "sales_30d": 6.0,
-          "sales_90d": 6.0,
-          "sales_12m_monthly_avg": 0.5,
-          "last_sale_date": "2026-08-16",
-          "sample_size_sales": 6,
+          "sales_30d": 9.0,
+          "sales_90d": 9.0,
+          "sales_12m_monthly_avg": 0.75,
+          "last_sale_date": "2026-08-29",
+          "sample_size_sales": 9,
           "restocks_30d": 0.0,
           "restocks_90d": 30.0,
           "restocks_12m_monthly_avg": 2.5,
