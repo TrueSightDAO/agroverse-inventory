@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T14:26:42.000Z",
+  "generatedAt": "2026-09-07T13:02:19.000Z",
   "source": "sync_partners_velocity",
   "windowsDays": [
     30,
@@ -7,10 +7,6 @@
     365
   ],
   "category_medians": {
-    "taste-of-rainforest-caramelized-cacao-beans": {
-      "monthly": 0.333,
-      "sample_size": 4
-    },
     "oscar-bahia-ceremonial-cacao-200g": {
       "monthly": 0.75,
       "sample_size": 17
@@ -18,10 +14,6 @@
     "8-ounce-organic-cacao-nibs": {
       "monthly": 0.458,
       "sample_size": 6
-    },
-    "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
-      "monthly": 0.75,
-      "sample_size": 2
     },
     "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
       "monthly": 1.417,
@@ -31,13 +23,21 @@
       "monthly": 3.333,
       "sample_size": 1
     },
+    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
+      "monthly": 1.667,
+      "sample_size": 1
+    },
     "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
       "monthly": 2.5,
       "sample_size": 1
     },
-    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
-      "monthly": 1.667,
-      "sample_size": 1
+    "taste-of-rainforest-caramelized-cacao-beans": {
+      "monthly": 0.333,
+      "sample_size": 4
+    },
+    "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
+      "monthly": 0.75,
+      "sample_size": 2
     }
   },
   "partners": {
@@ -245,12 +245,12 @@
         },
         "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
           "sales_30d": 0.0,
-          "sales_90d": 2.0,
+          "sales_90d": 1.0,
           "sales_12m_monthly_avg": 0.25,
           "last_sale_date": "2026-06-27",
           "sample_size_sales": 3,
           "restocks_30d": 0.0,
-          "restocks_90d": 10.0,
+          "restocks_90d": 1.0,
           "restocks_12m_monthly_avg": 0.833,
           "last_restock_date": "2026-06-18",
           "sample_size_restocks": 10
@@ -305,12 +305,12 @@
         },
         "oscar-bahia-ceremonial-cacao-200g": {
           "sales_30d": 0.0,
-          "sales_90d": 4.0,
+          "sales_90d": 3.0,
           "sales_12m_monthly_avg": 1.0,
           "last_sale_date": "2026-06-30",
           "sample_size_sales": 12,
           "restocks_30d": 0.0,
-          "restocks_90d": 20.0,
+          "restocks_90d": 10.0,
           "restocks_12m_monthly_avg": 5.25,
           "last_restock_date": "2026-06-18",
           "sample_size_restocks": 27
