@@ -1,0 +1,160 @@
+{
+  "generatedAt": "2026-09-12T23:28:33.395Z",
+  "source": "update_store_inventory",
+  "skus": [
+    {
+      "productId": "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g",
+      "productName": "Ceremonial Cacao – La do Sitio Farm, Pará Brazil, 2024 (200g)",
+      "priceUsd": "25",
+      "weightOz": 7.05,
+      "category": "retail",
+      "shipment": "AGL8",
+      "farm": "Paulo",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/la-do-sitio-farm.jpg",
+      "storeInventory": 0
+    },
+    {
+      "productId": "taste-of-rainforest-caramelized-cacao-beans",
+      "productName": "Taste of Rainforest - 200 grams Caramelized Cacao Beans",
+      "priceUsd": "25",
+      "weightOz": 7.05,
+      "category": "retail",
+      "shipment": "AGL10",
+      "farm": "Capela Velha Fazenda",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/taste-of-rainforest.jpeg",
+      "storeInventory": 0
+    },
+    {
+      "productId": "oscar-bahia-ceremonial-cacao-200g",
+      "productName": "Ceremonial Cacao – Oscar",
+      "priceUsd": "25",
+      "weightOz": 7.05,
+      "category": "retail",
+      "shipment": "AGL4",
+      "farm": "Oscar",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+      "storeInventory": 0
+    },
+    {
+      "productId": "8-ounce-organic-cacao-nibs",
+      "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
+      "priceUsd": "25",
+      "weightOz": 8,
+      "category": "retail",
+      "shipment": "AGL4",
+      "farm": "Oscar",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+      "storeInventory": 3
+    },
+    {
+      "productId": "organic-criollo-cacao-beans-oscar-farm",
+      "productName": "Organic Criollo Cacao Beans - Oscar\\",
+      "priceUsd": "",
+      "weightOz": null,
+      "category": "wholesale",
+      "shipment": "AGL14",
+      "farm": "Oscar",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+      "storeInventory": 0
+    },
+    {
+      "productId": "organic-hybrid-cacao-beans-jesus-da-deus",
+      "productName": "Organic Hybrid Cacao Beans - Jesus Da Deus Fazenda (per kg)",
+      "priceUsd": "",
+      "weightOz": null,
+      "category": "wholesale",
+      "shipment": "AGL13",
+      "farm": "Vivi",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/taste-of-rainforest.jpeg",
+      "storeInventory": 0
+    },
+    {
+      "productId": "organic-criollo-cacao-nibs-oscar-farm",
+      "productName": "Organic Criollo Cacao Nibs - Oscar\\",
+      "priceUsd": "",
+      "weightOz": null,
+      "category": "wholesale",
+      "shipment": "AGL4",
+      "farm": "Oscar",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+      "storeInventory": 0
+    },
+    {
+      "productId": "premium-organic-cacao-beans-la-do-sitio",
+      "productName": "Premium Organic Cacao Beans - La do Sitio Farm (per kg)",
+      "priceUsd": "",
+      "weightOz": null,
+      "category": "wholesale",
+      "shipment": "AGL8",
+      "farm": "Paulo",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/la-do-sitio-farm.jpg",
+      "storeInventory": 0
+    },
+    {
+      "productId": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
+      "productName": "Ceremonial Cacao – Fazenda Santa Ana, Bahia Brazil, 2023 (200g)",
+      "priceUsd": "25",
+      "weightOz": 7.05,
+      "category": "retail",
+      "shipment": "AGL2",
+      "farm": "Fazenda Santa Ana",
+      "imagePath": "https://www.agroverse.shop/assets/images/farms/fazenda-santa-ana-itacare.jpg",
+      "storeInventory": 0
+    },
+    {
+      "productId": "oscar-bahia-cacao-tea-1lb",
+      "productName": "Cacao Tea - 1lb Oscar",
+      "priceUsd": "20",
+      "weightOz": 16,
+      "category": "wholesale",
+      "shipment": "AGL4",
+      "farm": "Oscar",
+      "imagePath": "",
+      "storeInventory": 0
+    },
+    {
+      "productId": "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024",
+      "productName": "81% Organic Dark Chocolate Bar (50g) — Oscar's Farm, Bahia Brazil, 2024",
+      "priceUsd": "10",
+      "weightOz": 1.76,
+      "category": "Retail",
+      "shipment": "AGL4",
+      "farm": "Oscar's Farm, Bahia",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
+      "storeInventory": 0
+    },
+    {
+      "productId": "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023",
+      "productName": "81% Organic Dark Chocolate Bar (50g) — Fazenda Santa Ana, Bahia Brazil, 2023",
+      "priceUsd": "10",
+      "weightOz": 1.76,
+      "category": "Retail",
+      "shipment": "AGL2",
+      "farm": "Fazenda Santa Ana, Bahia",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
+      "storeInventory": 0
+    },
+    {
+      "productId": "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024",
+      "productName": "81% Organic Dark Chocolate Bar (50g) — Fazenda São Jorge, Bahia Brazil, 2024",
+      "priceUsd": "10",
+      "weightOz": 1.76,
+      "category": "retail",
+      "shipment": "AGL4",
+      "farm": "Fazenda São Jorge",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
+      "storeInventory": 9
+    },
+    {
+      "productId": "oscar-bahia-cacao-tea-50g",
+      "productName": "Cacao Tea – Oscar's Farm, Bahia Brazil, 2024 (50g)",
+      "priceUsd": "10",
+      "weightOz": 1.76,
+      "category": "retail",
+      "shipment": "AGL4",
+      "farm": "Oscar",
+      "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+      "storeInventory": 0
+    }
+  ]
+}
