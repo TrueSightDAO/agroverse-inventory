@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-12T23:28:33.395Z",
-  "source": "update_store_inventory",
+  "generatedAt": "2026-09-12T23:56:31.000Z",
+  "source": "sync_agroverse_store_inventory",
   "skus": [
     {
       "productId": "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g",
-      "productName": "Ceremonial Cacao – La do Sitio Farm, Pará Brazil, 2024 (200g)",
+      "productName": "Ceremonial Cacao \u2013 La do Sitio Farm, Par\u00e1 Brazil, 2024 (200g)",
       "priceUsd": "25",
       "weightOz": 7.05,
       "category": "retail",
@@ -26,7 +26,7 @@
     },
     {
       "productId": "oscar-bahia-ceremonial-cacao-200g",
-      "productName": "Ceremonial Cacao – Oscar",
+      "productName": "Ceremonial Cacao \u2013 Oscar",
       "priceUsd": "25",
       "weightOz": 7.05,
       "category": "retail",
@@ -92,7 +92,7 @@
     },
     {
       "productId": "ceremonial-cacao-fazenda-santa-ana-2023-200g",
-      "productName": "Ceremonial Cacao – Fazenda Santa Ana, Bahia Brazil, 2023 (200g)",
+      "productName": "Ceremonial Cacao \u2013 Fazenda Santa Ana, Bahia Brazil, 2023 (200g)",
       "priceUsd": "25",
       "weightOz": 7.05,
       "category": "retail",
@@ -114,7 +114,7 @@
     },
     {
       "productId": "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024",
-      "productName": "81% Organic Dark Chocolate Bar (50g) — Oscar's Farm, Bahia Brazil, 2024",
+      "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Oscar's Farm, Bahia Brazil, 2024",
       "priceUsd": "10",
       "weightOz": 1.76,
       "category": "Retail",
@@ -125,7 +125,7 @@
     },
     {
       "productId": "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023",
-      "productName": "81% Organic Dark Chocolate Bar (50g) — Fazenda Santa Ana, Bahia Brazil, 2023",
+      "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Fazenda Santa Ana, Bahia Brazil, 2023",
       "priceUsd": "10",
       "weightOz": 1.76,
       "category": "Retail",
@@ -136,18 +136,18 @@
     },
     {
       "productId": "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024",
-      "productName": "81% Organic Dark Chocolate Bar (50g) — Fazenda São Jorge, Bahia Brazil, 2024",
+      "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Fazenda S\u00e3o Jorge, Bahia Brazil, 2024",
       "priceUsd": "10",
       "weightOz": 1.76,
       "category": "retail",
       "shipment": "AGL4",
-      "farm": "Fazenda São Jorge",
+      "farm": "Fazenda S\u00e3o Jorge",
       "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
       "storeInventory": 9
     },
     {
       "productId": "oscar-bahia-cacao-tea-50g",
-      "productName": "Cacao Tea – Oscar's Farm, Bahia Brazil, 2024 (50g)",
+      "productName": "Cacao Tea \u2013 Oscar's Farm, Bahia Brazil, 2024 (50g)",
       "priceUsd": "10",
       "weightOz": 1.76,
       "category": "retail",
