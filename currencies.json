@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T17:21:48.000Z",
+  "generatedAt": "2026-09-13T12:16:38.000Z",
   "source": "sync_agroverse_currencies",
   "currencies": [
     "1 Gallon Zip Loc Bags",
@@ -145,6 +145,8 @@
     "USD - provisions for voting rights cash out",
     "USDC",
     "USDT",
-    "Winnowing and Cracking Machine from Rusty"
+    "Winnowing and Cracking Machine from Rusty",
+    "zz-uat-currency-test-1789261732881",
+    "zz-uat-test-currency-1789262098013"
   ]
 }
