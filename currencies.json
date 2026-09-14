@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T12:16:38.000Z",
+  "generatedAt": "2026-09-14T13:21:04.000Z",
   "source": "sync_agroverse_currencies",
   "currencies": [
     "1 Gallon Zip Loc Bags",
@@ -109,6 +109,7 @@
     "Chocolate Mold from Rusty",
     "Chocolate Wrapper Die Cutter from Rusty",
     "Collapsible Foldable Wagon Beach Cart",
+    "Coopercabruca Cacao Butter (KG)",
     "Correios packing box to hold cacao nibs 20kg",
     "Digital Kitchen Scale, 10kg Capacity",
     "ETH",
@@ -130,6 +131,7 @@
     "NovaGaia Tree Planting Pledge - QR Code",
     "Plastic Bag 12cm X 25cm - 500 grams capacity",
     "Plastic Bag 40cm X 60cm - 10 kilograms capacity",
+    "Plastic Pallet (per pallet, FBN Tambores Ilheus, R$240/3 receipt 20260912)",
     "Propane Tank - 16 oz",
     "QR Code Sticker 4x3cm (Kraft Pouch) - Brazil",
     "RLAVBL 7x5x4 corrugated ship box (50ct, Amazon 111-6184462-4075467)",
@@ -141,12 +143,11 @@
     "Steel Tape Measure 5m x 19mm Self-Locking Vonder Plus",
     "Sticker Mule 4x2in custom rectangle label (per piece, order R384751187)",
     "SunMint Tree Planting Pledge - QR Code",
+    "TEST QR Currency 2026-09-13",
     "USD",
     "USD - provisions for voting rights cash out",
     "USDC",
     "USDT",
-    "Winnowing and Cracking Machine from Rusty",
-    "zz-uat-currency-test-1789261732881",
-    "zz-uat-test-currency-1789262098013"
+    "Winnowing and Cracking Machine from Rusty"
   ]
 }
