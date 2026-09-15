@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-13T11:57:00.000Z",
+  "generatedAt": "2026-09-15T11:48:23.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
       "items": [
         {
           "productId": "8-ounce-organic-cacao-nibs",
-          "inventory": 137,
-          "venueInventory": 137,
+          "inventory": 135,
+          "venueInventory": 135,
           "onlineInventory": 3,
           "availableOnline": true,
           "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
