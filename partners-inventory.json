@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T12:40:49.000Z",
+  "generatedAt": "2026-10-03T11:43:44.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -453,8 +453,8 @@
       "items": [
         {
           "productId": "oscar-bahia-ceremonial-cacao-200g",
-          "inventory": 7,
-          "venueInventory": 7,
+          "inventory": 5,
+          "venueInventory": 5,
           "onlineInventory": 0,
           "availableOnline": false,
           "productName": "Ceremonial Cacao \u2013 Oscar",
