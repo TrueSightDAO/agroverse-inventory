@@ -1,0 +1,176 @@
+{
+  "schema_version": 2,
+  "request_id": "d8ca658e-9c16-4a9d-bef2-054c0dcdae82",
+  "generated_at": "2026-10-13T01:19:54Z",
+  "source": "landed_cost_clone",
+  "event": "landed_cost_composition",
+  "note": "Landed-cost revaluation for AWB 047-3175-3223 (Black King / Matheus -> TrueTech SF). Outputs are the SAME physical assets as inputs, revalued ex-works -> landed. No repackaging/depletion.",
+  "holder": {
+    "key": null,
+    "label": null
+  },
+  "inputs": [
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "8 Ounce Package Kraft Pouch - Ilheus, Brazil 2024",
+      "quantity": 129,
+      "unit_cost_usd": 6.64,
+      "extended_cost_usd": 856.56,
+      "cost_basis": "ex-works"
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Cacao Almonds KG from Paulo's farm - AGL8",
+      "quantity": 10,
+      "unit_cost_usd": 18.212,
+      "extended_cost_usd": 182.12,
+      "cost_basis": "ex-works"
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Cacao Mass Bar (500grams) - Ilheus, Brazil 2024",
+      "quantity": 37,
+      "unit_cost_usd": 15.6951006,
+      "extended_cost_usd": 580.7187,
+      "cost_basis": "ex-works"
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Cacao Nibs (KG) - Ilheus, Brazil 2024",
+      "quantity": 80,
+      "unit_cost_usd": 24.61847089,
+      "extended_cost_usd": 1969.4777,
+      "cost_basis": "ex-works"
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Cacao Nibs (Kilograms) Santos 20260213 - AGL13",
+      "quantity": 99.5,
+      "unit_cost_usd": 10.18234711,
+      "extended_cost_usd": 1013.1435,
+      "cost_basis": "ex-works"
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Cacao Tea (Kilograms) Santos 20260213 - AGL13",
+      "quantity": 21,
+      "unit_cost_usd": 10.18234711,
+      "extended_cost_usd": 213.8293,
+      "cost_basis": "ex-works"
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Ceremonial Cacao Kraft Pouch - 20250219006 | Cacao Mass | 200 grams | Paulo 2024 | Santos 018-2025 016-2025 || Ilheus - AGL8",
+      "quantity": 169,
+      "unit_cost_usd": 10.37,
+      "extended_cost_usd": 1752.53,
+      "cost_basis": "ex-works"
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Coopercabruca Cacao Butter (KG)",
+      "quantity": 5,
+      "unit_cost_usd": 17.33,
+      "extended_cost_usd": 86.65,
+      "cost_basis": "ex-works"
+    }
+  ],
+  "outputs": [
+    {
+      "suggested_currency": "8 Ounce Package Kraft Pouch - Ilheus, Brazil 2024 + 047-3175-3223 - San Francisco",
+      "units": 129,
+      "unit_kind": "each",
+      "weight_per_unit_grams": 226.796,
+      "total_weight_grams": 29256.683999999997,
+      "unit_cost_usd": 10.51,
+      "line_total_usd": 1355.79,
+      "cost_basis": "landed"
+    },
+    {
+      "suggested_currency": "Cacao Almonds KG from Paulo's farm - AGL8 + 047-3175-3223 - San Francisco",
+      "units": 10,
+      "unit_kind": "each",
+      "weight_per_unit_grams": 1000,
+      "total_weight_grams": 10000,
+      "unit_cost_usd": 35.28,
+      "line_total_usd": 352.8,
+      "cost_basis": "landed"
+    },
+    {
+      "suggested_currency": "Cacao Mass Bar (500grams) - Ilheus, Brazil 2024 + 047-3175-3223 - San Francisco",
+      "units": 37,
+      "unit_kind": "each",
+      "weight_per_unit_grams": 500,
+      "total_weight_grams": 18500,
+      "unit_cost_usd": 24.23,
+      "line_total_usd": 896.51,
+      "cost_basis": "landed"
+    },
+    {
+      "suggested_currency": "Cacao Nibs (KG) - Ilheus, Brazil 2024 + 047-3175-3223 - San Francisco",
+      "units": 80,
+      "unit_kind": "each",
+      "weight_per_unit_grams": 1000,
+      "total_weight_grams": 80000,
+      "unit_cost_usd": 41.69,
+      "line_total_usd": 3335.2,
+      "cost_basis": "landed"
+    },
+    {
+      "suggested_currency": "Cacao Nibs (Kilograms) Santos 20260213 - AGL13 + 047-3175-3223 - San Francisco",
+      "units": 99.5,
+      "unit_kind": "each",
+      "weight_per_unit_grams": 1000,
+      "total_weight_grams": 99500.0,
+      "unit_cost_usd": 27.25,
+      "line_total_usd": 2711.375,
+      "cost_basis": "landed"
+    },
+    {
+      "suggested_currency": "Cacao Tea (Kilograms) Santos 20260213 - AGL13 + 047-3175-3223 - San Francisco",
+      "units": 21,
+      "unit_kind": "each",
+      "weight_per_unit_grams": 1000,
+      "total_weight_grams": 21000,
+      "unit_cost_usd": 27.25,
+      "line_total_usd": 572.25,
+      "cost_basis": "landed"
+    },
+    {
+      "suggested_currency": "Ceremonial Cacao Kraft Pouch - 20250219006 | Cacao Mass | 200 grams | Paulo 2024 | Santos 018-2025 016-2025 || Ilheus - AGL8 + 047-3175-3223 - San Francisco",
+      "units": 169,
+      "unit_kind": "each",
+      "weight_per_unit_grams": 200,
+      "total_weight_grams": 33800,
+      "unit_cost_usd": 13.78,
+      "line_total_usd": 2328.82,
+      "cost_basis": "landed"
+    },
+    {
+      "suggested_currency": "Coopercabruca Cacao Butter (KG) + 047-3175-3223 - San Francisco",
+      "units": 5,
+      "unit_kind": "each",
+      "weight_per_unit_grams": 1000,
+      "total_weight_grams": 5000,
+      "unit_cost_usd": 34.4,
+      "line_total_usd": 172.0,
+      "cost_basis": "landed"
+    }
+  ],
+  "totals": {
+    "inputs_subtotal_usd": 6655.0292,
+    "outputs_total_usd": 11724.745,
+    "freight_and_landing_usd": 5069.7158,
+    "total_output_weight_grams": 297056.684,
+    "landed_cost_per_gram_usd": 0.03947
+  },
+  "freight_reference": {
+    "awb": "047-3175-3223",
+    "carrier": "TAP Portugal TP237",
+    "awb_charge_usd": 802.7,
+    "fda_prior_notice": "F26X30142399",
+    "fumigation_brl": 405,
+    "tape_brl": 63.33
+  },
+  "raw_request_text": "[d8ca658e-9c16-4a9d-bef2-054c0dcdae82] 2026-10-13T01:19:54Z\nHolder: (unset)\n\nInputs (ex-works, pre-export):\n- 8 Ounce Package Kraft Pouch - Ilheus, Brazil 2024 (129 \u00d7 $6.6400 = $856.5600)\n- Cacao Almonds KG from Paulo's farm - AGL8 (10 \u00d7 $18.2120 = $182.1200)\n- Cacao Mass Bar (500grams) - Ilheus, Brazil 2024 (37 \u00d7 $15.6951 = $580.7187)\n- Cacao Nibs (KG) - Ilheus, Brazil 2024 (80 \u00d7 $24.6185 = $1969.4777)\n- Cacao Nibs (Kilograms) Santos 20260213 - AGL13 (99.5 \u00d7 $10.1823 = $1013.1435)\n- Cacao Tea (Kilograms) Santos 20260213 - AGL13 (21 \u00d7 $10.1823 = $213.8293)\n- Ceremonial Cacao Kraft Pouch - 20250219006 | Cacao Mass | 200 grams | Paulo 2024 | Santos 018-2025 016-2025 || Ilheus - AGL8 (169 \u00d7 $10.3700 = $1752.5300)\n- Coopercabruca Cacao Butter (KG) (5 \u00d7 $17.3300 = $86.6500)\nInputs total (ex-works): $6655.0292\n\nOutputs (landed, incl. freight/fumigation/materials):\n- 8 Ounce Package Kraft Pouch - Ilheus, Brazil 2024 + 047-3175-3223 - San Francisco (129 \u00d7 226.796 g \u2192 $10.5100/unit, line $1355.7900)\n- Cacao Almonds KG from Paulo's farm - AGL8 + 047-3175-3223 - San Francisco (10 \u00d7 1000 g \u2192 $35.2800/unit, line $352.8000)\n- Cacao Mass Bar (500grams) - Ilheus, Brazil 2024 + 047-3175-3223 - San Francisco (37 \u00d7 500 g \u2192 $24.2300/unit, line $896.5100)\n- Cacao Nibs (KG) - Ilheus, Brazil 2024 + 047-3175-3223 - San Francisco (80 \u00d7 1000 g \u2192 $41.6900/unit, line $3335.2000)\n- Cacao Nibs (Kilograms) Santos 20260213 - AGL13 + 047-3175-3223 - San Francisco (99.5 \u00d7 1000 g \u2192 $27.2500/unit, line $2711.3750)\n- Cacao Tea (Kilograms) Santos 20260213 - AGL13 + 047-3175-3223 - San Francisco (21 \u00d7 1000 g \u2192 $27.2500/unit, line $572.2500)\n- Ceremonial Cacao Kraft Pouch - 20250219006 | Cacao Mass | 200 grams | Paulo 2024 | Santos 018-2025 016-2025 || Ilheus - AGL8 + 047-3175-3223 - San Francisco (169 \u00d7 200 g \u2192 $13.7800/unit, line $2328.8200)\n- Coopercabruca Cacao Butter (KG) + 047-3175-3223 - San Francisco (5 \u00d7 1000 g \u2192 $34.4000/unit, line $172.0000)\nOutputs total (landed): $11724.7450\nTotal finished weight: 297.0567 kg\nFreight + landing roll-up: $5069.7158\nLanded cost per gram: $0.039470\nAWB: 047-3175-3223 (TAP TP237, SSA->SFO) | FDA Prior Notice: F26X30142399\n\nNOTE: Cost-stage revaluation only \u2014 outputs are the SAME physical assets as inputs,\nrevalued ex-works -> landed. NO repackaging, NO depletion. Do not merge origin and landed rows."
+}
