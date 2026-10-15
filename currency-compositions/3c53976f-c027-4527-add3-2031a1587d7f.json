@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "request_id": "3c53976f-c027-4527-add3-2031a1587d7f",
+  "generated_at": "2026-10-15T01:09:07.000Z",
+  "source": "manual_packaging_expense_writeoff",
+  "event": "packaging_expense_writeoff",
+  "holder": {
+    "key": null,
+    "label": "Matheus Reis"
+  },
+  "inputs": [
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Reinforced Cardboard Boxes - Size 40x30x30",
+      "quantity": 22,
+      "unit_cost_usd": 2.036,
+      "extended_cost_usd": 44.792
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Plastic Pallet (per pallet, FBN Tambores Ilheus, R$240/3 receipt 20260912)",
+      "quantity": 3,
+      "unit_cost_usd": 18.758,
+      "extended_cost_usd": 56.274
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Foam container box - 120 kraft pouches capacity",
+      "quantity": 2,
+      "unit_cost_usd": 24.10972604,
+      "extended_cost_usd": 48.21945208
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Foam container box - 46 cacao bar capacity (36cm X 40cm X 61cm)",
+      "quantity": 2,
+      "unit_cost_usd": 5.1854895,
+      "extended_cost_usd": 10.370979
+    }
+  ],
+  "outputs": [],
+  "totals": {
+    "inputs_subtotal_usd": 159.65643108,
+    "grand_total_usd": 159.65643108,
+    "total_output_weight_grams": 0,
+    "cost_per_gram_usd": null
+  },
+  "raw_request_text": null,
+  "client": {
+    "client_generated_at": "2026-10-15T01:09:07.806456+00:00"
+  }
+}
