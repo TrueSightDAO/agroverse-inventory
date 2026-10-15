@@ -784,14 +784,38 @@ function publishCurrenciesJsonToGitHub_(currencyList) {
  * For each matching row:
  *   1. Parse the event payload (Composition URL, Holder Name, flags)
  *   2. Fetch composition JSON from the URL
- *   3. Deplete consumed inputs from offchain asset location
- *   4. Add output rows to offchain asset location
+ *   3. Deplete consumed inputs — appends a NEGATIVE row to the 'offchain transactions'
+ *      SUBSTRATE (never writes to 'offchain asset location' directly: that tab is a
+ *      live array-formula spill off the substrate — see SCHEMA note below — and a
+ *      direct .setValue()/.appendRow() into its spill range corrupts the formula
+ *      with a #REF! error across the whole tab, as happened 2026-10-14/15).
+ *   4. Add output rows — appends a POSITIVE row to the same substrate, same reason.
  *   5. Set Currencies metadata (C=TRUE, E-J farm info, M SKU ID)
  *   6. Optionally rebuild store-inventory.json
  *   7. Mark row as processed
  *
  * Called via: GET ?action=processPostRepackagingCleanup
  */
+
+/**
+ * Appends one signed-amount row to the 'offchain transactions' SUBSTRATE sheet.
+ * This is the ONLY correct way to move a currency/quantity for a repackaging
+ * settlement. 'offchain asset location' (Main Ledger) is a derived view — cell A5
+ * holds a single array formula that spills a QUERY(...) over the substrate across
+ * columns A:C. Writing any value (via setValue or appendRow) into that spill range
+ * blocks the formula and the whole tab breaks to #REF! (incident 2026-10-14/15,
+ * fixed by clearing the stray cells — see agentic_ai_context/sops/REPACKAGING_SETTLEMENT_SOP.md).
+ * Never call .getSheetByName('offchain asset location') for a write in this file again.
+ */
+function appendOffchainSubstrateRow_(mainSs, holderName, currency, signedAmount, note) {
+  var sheet = mainSs.getSheetByName('offchain transactions');
+  if (!sheet) {
+    throw new Error("'offchain transactions' sheet not found — refusing to fall back to the derived 'offchain asset location' tab");
+  }
+  var description = '[REPACKAGING SETTLEMENT EVENT] ' + note;
+  sheet.appendRow([new Date(), description, holderName, signedAmount, currency]);
+}
+
 function processPostRepackagingCleanup_() {
   var log = [];
   var errors = [];
@@ -896,70 +920,42 @@ function processPostRepackagingCleanup_() {
           continue;
         }
         
-        // --- Step 3: Deplete inputs ---
+        // --- Step 3: Deplete inputs — SUBSTRATE append, never the derived tab ---
         if (depleteInputs) {
-          var assetSheet = mainSs.getSheetByName('offchain asset location');
-          if (assetSheet) {
-            var assetData = assetSheet.getDataRange().getValues();
-            for (var inp = 0; inp < composition.inputs.length; inp++) {
-              var input = composition.inputs[inp];
-              if (input.line_kind !== 'from_holder_inventory') {
-                rowLog.push('Skipped input (not from_holder_inventory): ' + (input.currency || 'unknown'));
-                continue;
-              }
-              var currency = input.currency;
-              var qty = parseFloat(input.quantity) || 0;
-              if (qty <= 0) continue;
-              
-              // Find row where col A == currency AND col B == holderName
-              for (var a = 1; a < assetData.length; a++) {
-                if (String(assetData[a][0] || '').trim() === String(currency).trim() &&
-                    String(assetData[a][1] || '').trim() === String(holderName).trim()) {
-                  var currentAmount = parseFloat(assetData[a][2]) || 0;
-                  var newAmount = Math.max(0, currentAmount - qty);
-                  if (newAmount !== currentAmount) {
-                    assetSheet.getRange(a + 1, 3).setValue(newAmount);
-                    rowLog.push('Depleted ' + currency + ' from ' + currentAmount + ' to ' + newAmount + ' (consumed ' + qty + ')');
-                  } else {
-                    rowLog.push('Skipped depletion for ' + currency + ': already 0 or unchanged');
-                  }
-                  break;
-                }
-              }
+          for (var inp = 0; inp < composition.inputs.length; inp++) {
+            var input = composition.inputs[inp];
+            if (input.line_kind !== 'from_holder_inventory') {
+              rowLog.push('Skipped input (not from_holder_inventory): ' + (input.currency || 'unknown'));
+              continue;
             }
-          } else {
-            rowErrors.push('offchain asset location sheet not found');
+            var currency = input.currency;
+            var qty = parseFloat(input.quantity) || 0;
+            if (qty <= 0) continue;
+
+            appendOffchainSubstrateRow_(mainSs, holderName, currency, -qty,
+              'consumed ' + qty + ' ' + currency + ' (holder ' + holderName + ', composition ' + compositionUrl + ')');
+            rowLog.push('Depleted ' + currency + ' by ' + qty + ' (substrate row appended, holder ' + holderName + ')');
           }
         }
-        
-        // --- Step 4: Add output locations ---
+
+        // --- Step 4: Add output locations — SUBSTRATE append, never the derived tab ---
         if (addOutputLocations) {
-          var assetSheet2 = mainSs.getSheetByName('offchain asset location');
-          if (assetSheet2) {
-            var assetData2 = assetSheet2.getDataRange().getValues();
-            for (var out = 0; out < composition.outputs.length; out++) {
-              var output = composition.outputs[out];
-              var suggestedCurrency = output.suggested_currency;
-              var units = parseFloat(output.units) || 0;
-              var unitCost = parseFloat(output.unit_cost_usd) || 0;
-              var totalValue = parseFloat(output.line_total_usd) || 0;
-              
-              // Check if row already exists (idempotent)
-              var exists = false;
-              for (var a2 = 1; a2 < assetData2.length; a2++) {
-                if (String(assetData2[a2][0] || '').trim() === String(suggestedCurrency).trim() &&
-                    String(assetData2[a2][1] || '').trim() === String(holderName).trim()) {
-                  exists = true;
-                  rowLog.push('Skipped output ' + suggestedCurrency + ': already exists');
-                  break;
-                }
-              }
-              
-              if (!exists && units > 0) {
-                assetSheet2.appendRow([suggestedCurrency, holderName, units, unitCost, totalValue]);
-                rowLog.push('Added output: ' + suggestedCurrency + ' x' + units + ' @ $' + unitCost);
-              }
-            }
+          for (var out = 0; out < composition.outputs.length; out++) {
+            var output = composition.outputs[out];
+            var suggestedCurrency = output.suggested_currency;
+            var units = parseFloat(output.units) || 0;
+            var unitCost = parseFloat(output.unit_cost_usd) || 0;
+
+            if (units <= 0) continue;
+
+            // Idempotency boundary is the Telegram Chat Logs STATUS_COL dedupe gate
+            // (this row only reaches Step 4 once, same as every other event type) —
+            // no separate "already exists" check needed, and the old one was itself
+            // buggy (it skipped adding output units whenever the holder already held
+            // ANY amount of that currency from an unrelated prior event).
+            appendOffchainSubstrateRow_(mainSs, holderName, suggestedCurrency, units,
+              'produced ' + units + ' ' + suggestedCurrency + ' @ $' + unitCost + '/unit (holder ' + holderName + ', composition ' + compositionUrl + ')');
+            rowLog.push('Added output: ' + suggestedCurrency + ' x' + units + ' @ $' + unitCost + ' (substrate row appended)');
           }
         }
         
