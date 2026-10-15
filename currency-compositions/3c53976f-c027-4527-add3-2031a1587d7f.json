@@ -19,9 +19,9 @@
     {
       "line_kind": "from_holder_inventory",
       "currency": "Plastic Pallet (per pallet, FBN Tambores Ilheus, R$240/3 receipt 20260912)",
-      "quantity": 3,
+      "quantity": 2,
       "unit_cost_usd": 18.758,
-      "extended_cost_usd": 56.274
+      "extended_cost_usd": 37.516
     },
     {
       "line_kind": "from_holder_inventory",
@@ -40,8 +40,8 @@
   ],
   "outputs": [],
   "totals": {
-    "inputs_subtotal_usd": 159.65643108,
-    "grand_total_usd": 159.65643108,
+    "inputs_subtotal_usd": 140.89843108,
+    "grand_total_usd": 140.89843108,
     "total_output_weight_grams": 0,
     "cost_per_gram_usd": null
   },
