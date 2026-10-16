@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T11:34:34.000Z",
+  "generatedAt": "2026-10-16T11:29:09.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -20,8 +20,8 @@
         },
         {
           "productId": "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g",
-          "inventory": 170,
-          "venueInventory": 170,
+          "inventory": 1,
+          "venueInventory": 1,
           "onlineInventory": 169,
           "availableOnline": true,
           "productName": "Ceremonial Cacao \u2013 La do Sitio Farm, Par\u00e1 Brazil, 2024 (200g)",
