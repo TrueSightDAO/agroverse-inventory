@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T11:06:41.000Z",
+  "generatedAt": "2026-10-25T11:36:18.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -25,7 +25,7 @@
           "onlineInventory": 169,
           "availableOnline": true,
           "productName": "Ceremonial Cacao \u2013 La do Sitio Farm, Par\u00e1 Brazil, 2024 (200g)",
-          "priceUsd": "$25.00",
+          "priceUsd": "$30.00",
           "category": "retail",
           "shipment": "AGL8",
           "farm": "Paulo",
@@ -161,7 +161,7 @@
           "onlineInventory": 169,
           "availableOnline": true,
           "productName": "Ceremonial Cacao \u2013 La do Sitio Farm, Par\u00e1 Brazil, 2024 (200g)",
-          "priceUsd": "$25.00",
+          "priceUsd": "$30.00",
           "category": "retail",
           "shipment": "AGL8",
           "farm": "Paulo",
@@ -179,6 +179,19 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Fazenda S\u00e3o Jorge",
+          "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
+        },
+        {
+          "productId": "organic-81-dark-chocolate-bar-50g-vivi-jesus-do-deus-bahia-2025",
+          "inventory": 40,
+          "venueInventory": 40,
+          "onlineInventory": 40,
+          "availableOnline": true,
+          "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Vivi's Farm, Bahia Brazil, 2025",
+          "priceUsd": "$10.00",
+          "category": "retail",
+          "shipment": "AGL13",
+          "farm": "Vivi's Farm",
           "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
         }
       ]
@@ -350,7 +363,7 @@
           "onlineInventory": 169,
           "availableOnline": true,
           "productName": "Ceremonial Cacao \u2013 La do Sitio Farm, Par\u00e1 Brazil, 2024 (200g)",
-          "priceUsd": "$25.00",
+          "priceUsd": "$30.00",
           "category": "retail",
           "shipment": "AGL8",
           "farm": "Paulo",
