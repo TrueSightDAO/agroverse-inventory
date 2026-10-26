@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T09:46:09.000Z",
+  "generatedAt": "2026-10-26T13:35:49.000Z",
   "source": "sync_partners_velocity",
   "windowsDays": [
     30,
@@ -7,29 +7,25 @@
     365
   ],
   "category_medians": {
-    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
-      "monthly": 1.417,
-      "sample_size": 3
+    "8-ounce-organic-cacao-nibs": {
+      "monthly": 0.458,
+      "sample_size": 6
     },
     "oscar-bahia-ceremonial-cacao-200g": {
       "monthly": 0.75,
       "sample_size": 17
     },
-    "8-ounce-organic-cacao-nibs": {
-      "monthly": 0.458,
-      "sample_size": 6
+    "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
+      "monthly": 0.917,
+      "sample_size": 3
     },
     "taste-of-rainforest-caramelized-cacao-beans": {
       "monthly": 0.333,
       "sample_size": 4
     },
-    "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
-      "monthly": 0.917,
+    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
+      "monthly": 1.417,
       "sample_size": 3
-    },
-    "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
-      "monthly": 2.5,
-      "sample_size": 1
     },
     "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
       "monthly": 1.667,
@@ -37,6 +33,10 @@
     },
     "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
       "monthly": 3.333,
+      "sample_size": 1
+    },
+    "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
+      "monthly": 2.5,
       "sample_size": 1
     }
   },
