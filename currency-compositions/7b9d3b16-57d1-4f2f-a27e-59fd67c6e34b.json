@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "request_id": "7b9d3b16-57d1-4f2f-a27e-59fd67c6e34b",
+  "generated_at": "2026-10-27T09:48:09.614Z",
+  "source": "repackaging_currency_ingest",
+  "event": "repackaging_batch_creation",
+  "holder": {
+    "key": null,
+    "label": null
+  },
+  "inputs": [
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Cacao Nibs (KG) - Ilheus, Brazil 2024 + 047-3175-3223 - San Francisco",
+      "quantity": 2,
+      "unit_cost_usd": 41.69,
+      "extended_cost_usd": 83.38
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Joyberg kraft cash envelope 6.5x3.2in (per piece, Amazon 111-2611520-6121033)",
+      "quantity": 40,
+      "unit_cost_usd": 0.0705,
+      "extended_cost_usd": 2.82
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Sticker Mule 4x2in custom rectangle label (per piece, order R384751187)",
+      "quantity": 40,
+      "unit_cost_usd": 0.554,
+      "extended_cost_usd": 22.16
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Agroverse 81% Cacao Chocolate Bar 50g | Oscar Cacao Nibs | Kirsten 20261027 | San Francisco - MAIN",
+      "suggested_currency": "Agroverse 81% Cacao Chocolate Bar 50g | Oscar Cacao Nibs | Kirsten 20261027 | San Francisco - MAIN",
+      "units": 40,
+      "unit_kind": "each",
+      "unit_custom": null,
+      "weight_per_unit_grams": 50,
+      "weight_display": {
+        "amount": 50,
+        "unit": "g"
+      },
+      "total_weight_grams": 2000,
+      "unit_cost_usd": 2.709,
+      "line_total_usd": 108.36
+    }
+  ],
+  "totals": {
+    "inputs_subtotal_usd": 108.36,
+    "grand_total_usd": 108.36,
+    "total_output_weight_grams": 2000,
+    "cost_per_gram_usd": 0.05418
+  },
+  "raw_request_text": "[7b9d3b16-57d1-4f2f-a27e-59fd67c6e34b] 2026-10-27T09:48:09.614Z\nHolder: (unset)\n\nInputs:\n- Cacao Nibs (KG) - Ilheus, Brazil 2024 + 047-3175-3223 - San Francisco (2 × $41.6900 = $83.3800)\n- Joyberg kraft cash envelope 6.5x3.2in (per piece, Amazon 111-2611520-6121033) (40 × $0.0705 = $2.8200)\n- Sticker Mule 4x2in custom rectangle label (per piece, order R384751187) (40 × $0.5540 = $22.1600)\nInputs total: $108.3600\n\nOutputs:\n- Agroverse 81% Cacao Chocolate Bar 50g | Oscar Cacao Nibs | Kirsten 20261027 | San Francisco - MAIN (40 × 50 g → $2.7090/unit, line $108.3600)\nTotal finished weight: 2.00 kg\nCost per gram: $0.054180",
+  "client": {
+    "client_generated_at": "2026-10-27T09:48:09.614Z"
+  }
+}
