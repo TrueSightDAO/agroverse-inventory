@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T12:17:21.000Z",
+  "generatedAt": "2026-10-29T13:07:08.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -15,7 +15,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
         },
         {
@@ -29,7 +29,7 @@
           "category": "retail",
           "shipment": "AGL8",
           "farm": "Paulo",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/la-do-sitio-farm.jpg",
+          "imagePath": "https://agroverse.shop/assets/images/products/la-do-sitio-farm.jpg",
           "gtin": "860010660232"
         }
       ]
@@ -47,7 +47,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
         }
       ]
@@ -65,7 +65,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
         }
       ]
@@ -83,7 +83,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
         }
       ]
@@ -101,7 +101,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         },
         {
@@ -115,7 +115,7 @@
           "category": "retail",
           "shipment": "AGL10",
           "farm": "Capela Velha Fazenda",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/taste-of-rainforest.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/taste-of-rainforest.jpeg",
           "gtin": "860010660249"
         }
       ]
@@ -133,7 +133,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         }
       ]
@@ -151,7 +151,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
         },
         {
@@ -165,7 +165,7 @@
           "category": "retail",
           "shipment": "AGL8",
           "farm": "Paulo",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/la-do-sitio-farm.jpg",
+          "imagePath": "https://agroverse.shop/assets/images/products/la-do-sitio-farm.jpg",
           "gtin": "860010660232"
         },
         {
@@ -179,7 +179,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Fazenda S\u00e3o Jorge",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
+          "imagePath": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
         },
         {
           "productId": "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024",
@@ -192,7 +192,7 @@
           "category": "Retail",
           "shipment": "AGL4",
           "farm": "Oscar's Farm, Bahia",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
+          "imagePath": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
         },
         {
           "productId": "organic-81-dark-chocolate-bar-50g-vivi-jesus-do-deus-bahia-2025",
@@ -205,7 +205,7 @@
           "category": "retail",
           "shipment": "AGL13",
           "farm": "Vivi's Farm",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
+          "imagePath": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg"
         }
       ]
     },
@@ -222,7 +222,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
         }
       ]
@@ -240,7 +240,7 @@
           "category": "retail",
           "shipment": "AGL2",
           "farm": "Fazenda Santa Ana",
-          "imagePath": "https://www.agroverse.shop/assets/images/farms/fazenda-santa-ana-itacare.jpg",
+          "imagePath": "https://agroverse.shop/assets/images/farms/fazenda-santa-ana-itacare.jpg",
           "gtin": "860010660232"
         },
         {
@@ -254,7 +254,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         }
       ]
@@ -272,7 +272,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         }
       ]
@@ -290,7 +290,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
         }
       ]
@@ -308,7 +308,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         }
       ]
@@ -326,7 +326,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         }
       ]
@@ -344,7 +344,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
         }
       ]
@@ -362,39 +362,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
-          "gtin": "860010660232"
-        }
-      ]
-    },
-    "sacred-earth-farms": {
-      "items": [
-        {
-          "productId": "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g",
-          "inventory": 4,
-          "venueInventory": 4,
-          "onlineInventory": 169,
-          "availableOnline": true,
-          "productName": "Ceremonial Cacao \u2013 La do Sitio Farm, Par\u00e1 Brazil, 2024 (200g)",
-          "priceUsd": "$30.00",
-          "category": "retail",
-          "shipment": "AGL8",
-          "farm": "Paulo",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/la-do-sitio-farm.jpg",
-          "gtin": "860010660232"
-        },
-        {
-          "productId": "oscar-bahia-ceremonial-cacao-200g",
-          "inventory": 15,
-          "venueInventory": 15,
-          "onlineInventory": 0,
-          "availableOnline": false,
-          "productName": "Ceremonial Cacao \u2013 Oscar",
-          "priceUsd": "$25.00",
-          "category": "retail",
-          "shipment": "AGL4",
-          "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         }
       ]
@@ -412,7 +380,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         }
       ]
@@ -430,7 +398,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
         }
       ]
@@ -448,7 +416,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         }
       ]
@@ -466,7 +434,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         }
       ]
@@ -484,7 +452,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/cacao-nibs.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
         }
       ]
@@ -502,7 +470,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         }
       ]
@@ -520,7 +488,7 @@
           "category": "retail",
           "shipment": "AGL4",
           "farm": "Oscar",
-          "imagePath": "https://www.agroverse.shop/assets/images/products/oscars-farm.jpeg",
+          "imagePath": "https://agroverse.shop/assets/images/products/oscars-farm.jpeg",
           "gtin": "860010660232"
         }
       ]
