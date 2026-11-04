@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "request_id": "9e969d3f-8cd9-40a1-b456-3a8a7189adc2",
+  "generated_at": "2026-11-04T11:23:29.031Z",
+  "source": "repackaging_currency_ingest",
+  "event": "repackaging_batch_creation",
+  "holder": {
+    "key": null,
+    "label": "Kirsten Ritschel"
+  },
+  "inputs": [
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "8 Ounce Package Kraft Pouch - Ilheus, Brazil 2024 + 047-3175-3223 - San Francisco",
+      "quantity": 8,
+      "unit_cost_usd": 10.51,
+      "extended_cost_usd": 84.08
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Coopercabruca Cacao Butter (KG) + 047-3175-3223 - San Francisco",
+      "quantity": 0.1,
+      "unit_cost_usd": 34.4,
+      "extended_cost_usd": 3.44
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Joyberg kraft cash envelope 6.5x3.2in (per piece, Amazon 111-2611520-6121033)",
+      "quantity": 42,
+      "unit_cost_usd": 0.0705,
+      "extended_cost_usd": 2.961
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Sticker Mule 4x2in custom rectangle label (per piece, order R384751187)",
+      "quantity": 42,
+      "unit_cost_usd": 0.554,
+      "extended_cost_usd": 23.268
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Agroverse 81% Cacao Chocolate Bar 50g | Oscar Cacao Nibs | Kirsten 20261104 | San Francisco - MAIN",
+      "suggested_currency": "Agroverse 81% Cacao Chocolate Bar 50g | Oscar Cacao Nibs | Kirsten 20261104 | San Francisco - MAIN",
+      "units": 42,
+      "unit_kind": "each",
+      "unit_custom": null,
+      "weight_per_unit_grams": 50,
+      "weight_display": {
+        "amount": 50,
+        "unit": "g"
+      },
+      "total_weight_grams": 2100,
+      "unit_cost_usd": 2.70831,
+      "line_total_usd": 113.74902
+    }
+  ],
+  "totals": {
+    "inputs_subtotal_usd": 113.749,
+    "grand_total_usd": 113.749,
+    "total_output_weight_grams": 2100,
+    "cost_per_gram_usd": 0.054166190476
+  },
+  "raw_request_text": null,
+  "client": {
+    "client_generated_at": null
+  }
+}
