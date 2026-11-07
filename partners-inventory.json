@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T14:20:17.000Z",
+  "generatedAt": "2026-11-07T07:01:58.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -153,6 +153,19 @@
           "farm": "Oscar",
           "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
+        },
+        {
+          "productId": "cacao-mass-bar-500g-ilheus-2024",
+          "inventory": 37,
+          "venueInventory": 37,
+          "onlineInventory": 37,
+          "availableOnline": true,
+          "productName": "Cacao Mass Bar \u2013 Oscar's Farm, Bahia Brazil, 2024 (500g)",
+          "priceUsd": "$60.00",
+          "category": "retail",
+          "shipment": "AGL4",
+          "farm": "Oscar",
+          "imagePath": "https://agroverse.shop/assets/images/products/cacao-mass-bar-500g-1.jpeg"
         },
         {
           "productId": "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g",

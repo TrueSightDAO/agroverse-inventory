@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T14:20:17.000Z",
+  "generatedAt": "2026-11-07T07:01:58.000Z",
   "source": "sync_agroverse_store_inventory",
   "skus": [
     {
@@ -166,6 +166,17 @@
       "farm": "Vivi's Farm",
       "imagePath": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
       "storeInventory": 40
+    },
+    {
+      "productId": "cacao-mass-bar-500g-ilheus-2024",
+      "productName": "Cacao Mass Bar \u2013 Oscar's Farm, Bahia Brazil, 2024 (500g)",
+      "priceUsd": "60",
+      "weightOz": 17.64,
+      "category": "retail",
+      "shipment": "AGL4",
+      "farm": "Oscar",
+      "imagePath": "https://agroverse.shop/assets/images/products/cacao-mass-bar-500g-1.jpeg",
+      "storeInventory": 37
     }
   ]
 }
