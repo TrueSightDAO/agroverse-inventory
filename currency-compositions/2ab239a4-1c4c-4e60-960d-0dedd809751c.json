@@ -1,0 +1,84 @@
+{
+  "schema_version": 2,
+  "request_id": "2ab239a4-1c4c-4e60-960d-0dedd809751c",
+  "generated_at": "2026-11-14T10:16:45.952440Z",
+  "source": "sophia_autopilot_backfill",
+  "event": "repackaging_batch_creation",
+  "holder": {
+    "key": null,
+    "label": "Kirsten Ritschel"
+  },
+  "inputs": [
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Cacao Nibs (KG) - Ilheus, Brazil 2024 + 047-3175-3223 - San Francisco",
+      "quantity": 2.0,
+      "unit_cost_usd": 41.69,
+      "extended_cost_usd": 83.38
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Coopercabruca Cacao Butter (KG) + 047-3175-3223 - San Francisco",
+      "quantity": 0.1,
+      "unit_cost_usd": 34.4,
+      "extended_cost_usd": 3.44
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Cane Sugar (KG) - Organic Evaporated Cane Sugar (Bulk) | Rainbow Grocery, San Francisco",
+      "quantity": 0.475,
+      "unit_cost_usd": 6.1508971,
+      "extended_cost_usd": 2.9216761225
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Agroverse 81% Cacao Chocolate Block (Kilograms) #1 | Oscar Cacao Nibs | Kirsten 20261114 | San Francisco - MAIN",
+      "suggested_currency": "Agroverse 81% Cacao Chocolate Block (Kilograms) #1 | Oscar Cacao Nibs | Kirsten 20261114 | San Francisco - MAIN",
+      "units": 2.5,
+      "unit_kind": "kg",
+      "unit_custom": null,
+      "weight_per_unit_grams": 1000,
+      "weight_display": {
+        "amount": 2.5,
+        "unit": "kg"
+      },
+      "total_weight_grams": 2500,
+      "unit_cost_usd": 34.65638473471429,
+      "line_total_usd": 86.6409618368,
+      "cacao_mass_fraction": 0.81,
+      "sugar_mass_fraction": 0.19
+    },
+    {
+      "label": "SAMPLES - cacao mass trimmed from Agroverse 81% Cacao Chocolate Block (Kilograms) #1 | Oscar Cacao Nibs | Kirsten 20261114 | San Francisco - MAIN",
+      "suggested_currency": null,
+      "units": 0.075,
+      "unit_kind": "kg",
+      "unit_custom": null,
+      "weight_per_unit_grams": 1000,
+      "weight_display": {
+        "amount": 0.075,
+        "unit": "kg"
+      },
+      "total_weight_grams": 75.0,
+      "unit_cost_usd": 41.342857142857135,
+      "line_total_usd": 3.1007142857,
+      "notes": "Expensed as samples per governor instruction; not an inventory asset."
+    }
+  ],
+  "totals": {
+    "inputs_subtotal_usd": 89.7416761225,
+    "grand_total_usd": 89.7416761225,
+    "total_output_weight_grams": 2575.0,
+    "cost_per_gram_usd": 0.03465638473471429,
+    "sugar_mass_fraction": 0.19,
+    "cacao_mass_fraction": 0.81,
+    "samples_expensed_usd": 3.1007142857,
+    "samples_mass_kg": 0.075,
+    "cacao_mass_unit_cost_usd_per_kg": 41.34285714285713
+  },
+  "raw_request_text": "[2ab239a4-1c4c-4e60-960d-0dedd809751c] 2026-11-14T10:16:45.952440Z\nHolder: Kirsten Ritschel\n\nBACKFILL NOTES (Sophia Truesight, admin+sophia@truesight.me):\nComposition reconstructed from the already-booked ledger rows in MAIN offchain transactions r6071-r6077. The block was\nbooked manually (not via an automated repackaging ingest), so no composition file was emitted\nand Currencies column O would otherwise stay blank.\n\nInputs (all consumed; cacao mass 2.0 kg nibs + 0.1 kg butter = 2.1000 kg):\n- Cacao Nibs (KG) - Ilheus, Brazil 2024 + 047-3175-3223 - San Francisco (2.0 x $41.6900 = $83.3800)\n- Coopercabruca Cacao Butter (KG) + 047-3175-3223 - San Francisco (0.1 x $34.4000 = $3.4400)\n- Cane Sugar (KG) - Organic Evaporated Cane Sugar (Bulk) | Rainbow Grocery, San Francisco (0.475 x $6.1508971 = $2.9216761225)\nInputs subtotal: $89.7416761225\nCacao mass unit cost: $86.8200 / 2.10 kg = $41.34285714285713/kg\n\nOutputs:\n- Agroverse 81% Cacao Chocolate Block (Kilograms) #1 | Oscar Cacao Nibs | Kirsten 20261114 | San Francisco - MAIN (2.5 kg -> $34.65638473471429/kg, line $86.6409618368)\n- SAMPLES 0.0750 kg cacao mass @ $41.34285714285713/kg = $3.1007142857\nOutputs total: $89.7416761225  (ties to inputs exactly)\nTotal finished weight: 2.50 kg block + 0.0750 kg samples = 2.5750 kg\n\nSugar quantity fixed by the governor's 81% ruling (Gary Teh, 2026-11-14):\nblock cacao mass = 2.5 x 0.81 = 2.0250 kg; sugar = 2.5 - 2.0250 = 0.4750 kg.\nCacao fed 2.1000 kg - 2.0250 kg in block = 0.0750 kg surplus expensed as samples.\n\nMASS FRACTIONS: the block is 81.00% cacao mass / 19.00% sugar by mass,\nderived from the booked quantities, not asserted. Recorded as measured.\n\nUNIT CONVENTION NOTE: this file uses units = KILOGRAMS with weight_per_unit_grams = 1000,\nso that units x unit_cost_usd = line_total_usd AND units x weight_per_unit_grams = total_weight_grams.\nThis matches the Currencies convention for a per-kg asset (Unit Weight = 1000).\nNOTE: the earlier Block #1 file 2abac3bb-...json used units=1 with weight_per_unit_grams=2500,\nwhich makes units x unit_cost_usd = 24.16 != line_total_usd = 60.40 (arithmetic inconsistency in\nthat file, flagged for correction). This file does not repeat it.\n\nLedger rows booked: MAIN r6071 sugar receipt +0.475, r6072 nibs -2.0, r6073 butter -0.1, r6074 sugar -0.475, r6075 samples USD -$3.1007142857, r6076 block +2.5, r6077 Main Ledger equity holdings +$2.9216761225. MAIN-only production: no AGL13 injection legs.",
+  "client": {
+    "client_generated_at": "2026-11-14T10:16:45.952440Z"
+  }
+}
