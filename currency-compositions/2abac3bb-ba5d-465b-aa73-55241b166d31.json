@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "request_id": "2abac3bb-ba5d-465b-aa73-55241b166d31",
+  "generated_at": "2026-11-14T05:28:31.962Z",
+  "source": "sophia_autopilot_backfill",
+  "event": "repackaging_batch_creation",
+  "holder": {
+    "key": null,
+    "label": "Kirsten Ritschel"
+  },
+  "inputs": [
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Cacao Nibs (Kilograms) Santos 20260213 - AGL13 + 047-3175-3223 - San Francisco",
+      "quantity": 2,
+      "unit_cost_usd": 27.25,
+      "extended_cost_usd": 54.5
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Coopercabruca Cacao Butter (KG) + 047-3175-3223 - San Francisco",
+      "quantity": 0.1,
+      "unit_cost_usd": 34.4,
+      "extended_cost_usd": 3.44
+    },
+    {
+      "line_kind": "from_holder_inventory",
+      "currency": "Cane Sugar (KG) - Organic Evaporated Cane Sugar (Bulk) | Rainbow Grocery, San Francisco",
+      "quantity": 0.4,
+      "unit_cost_usd": 6.1508971,
+      "extended_cost_usd": 2.46035884
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Agroverse 81% Cacao Chocolate Block 2.5kg #1 | Vivi Cacao Nibs | Kirsten 20261114 | San Francisco - AGL13",
+      "suggested_currency": "Agroverse 81% Cacao Chocolate Block 2.5kg #1 | Vivi Cacao Nibs | Kirsten 20261114 | San Francisco - AGL13",
+      "units": 1,
+      "unit_kind": "each",
+      "unit_custom": null,
+      "weight_per_unit_grams": 2500,
+      "weight_display": {
+        "amount": 2.5,
+        "unit": "kg"
+      },
+      "total_weight_grams": 2500,
+      "unit_cost_usd": 24.160143536,
+      "line_total_usd": 60.40035884
+    }
+  ],
+  "totals": {
+    "inputs_subtotal_usd": 60.40035884,
+    "grand_total_usd": 60.40035884,
+    "total_output_weight_grams": 2500,
+    "cost_per_gram_usd": 0.024160143536,
+    "sugar_mass_fraction": 0.16,
+    "cacao_mass_fraction": 0.84
+  },
+  "raw_request_text": "[2abac3bb-ba5d-465b-aa73-55241b166d31] 2026-11-14T05:28:31.962Z\nHolder: Kirsten Ritschel\n\nBACKFILL NOTES (Sophia Truesight, admin+sophia@truesight.me):\nThis composition was reconstructed from the already-booked ledger rows in AGL13\nTransactions (r59 nibs -2.0kg, r60 butter -0.1kg, r61 sugar +0.4kg, r62 block +2.5kg,\nr63 butter transfer +0.1kg). The original repackaging ingest did not emit a\ncomposition file for this block, leaving Currencies r180 column O blank.\n\nInputs:\n- Cacao Nibs (Kilograms) Santos 20260213 - AGL13 + 047-3175-3223 - San Francisco (2 × $27.2500 = $54.5000)\n- Coopercabruca Cacao Butter (KG) + 047-3175-3223 - San Francisco (0.1 × $34.4000 = $3.4400)\n- Cane Sugar (KG) - Organic Evaporated Cane Sugar (Bulk) | Rainbow Grocery, San Francisco (0.4 × $6.1509 = $2.4604)\nInputs total: $60.4004\n\nOutputs:\n- Agroverse 81% Cacao Chocolate Block 2.5kg #1 | Vivi Cacao Nibs | Kirsten 20261114 | San Francisco - AGL13 (1 × 2500 g → $24.1601/unit, line $60.4004)\nTotal finished weight: 2.50 kg\nCost per gram: $0.024160\n\nSugar quantity was derived by mass balance per Gary Teh ruling 2026-11-14:\n2.5 kg block - 2.0 kg nibs - 0.1 kg butter = 0.4 kg cane sugar.\nNote the resulting composition is 84% cacao / 16% sugar by mass, not 81/19 —\nrecorded as measured rather than as labelled.",
+  "client": {
+    "client_generated_at": "2026-11-14T05:28:31.962Z"
+  }
+}
