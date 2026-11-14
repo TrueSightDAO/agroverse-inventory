@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T02:28:51.194Z",
+  "generatedAt": "2026-11-14T03:28:48.892Z",
   "source": "update_store_inventory",
   "skus": [
     {
@@ -121,7 +121,7 @@
       "shipment": "AGL4",
       "farm": "Oscar's Farm, Bahia",
       "imagePath": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
-      "storeInventory": 0
+      "storeInventory": 40
     },
     {
       "productId": "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023",
