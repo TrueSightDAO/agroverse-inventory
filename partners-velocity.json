@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T16:52:31.000Z",
+  "generatedAt": "2026-11-16T16:27:47.000Z",
   "source": "sync_partners_velocity",
   "windowsDays": [
     30,
@@ -7,21 +7,13 @@
     365
   ],
   "category_medians": {
-    "8-ounce-organic-cacao-nibs": {
-      "monthly": 0.458,
-      "sample_size": 6
-    },
-    "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
-      "monthly": 1.25,
-      "sample_size": 3
-    },
     "oscar-bahia-ceremonial-cacao-200g": {
-      "monthly": 0.792,
+      "monthly": 0.75,
       "sample_size": 14
     },
-    "taste-of-rainforest-caramelized-cacao-beans": {
-      "monthly": 0.333,
-      "sample_size": 4
+    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
+      "monthly": 1.667,
+      "sample_size": 1
     },
     "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
       "monthly": 3.333,
@@ -31,13 +23,21 @@
       "monthly": 1.417,
       "sample_size": 3
     },
-    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
-      "monthly": 1.667,
-      "sample_size": 1
-    },
     "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
       "monthly": 2.5,
       "sample_size": 1
+    },
+    "8-ounce-organic-cacao-nibs": {
+      "monthly": 0.458,
+      "sample_size": 6
+    },
+    "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g": {
+      "monthly": 1.25,
+      "sample_size": 3
+    },
+    "taste-of-rainforest-caramelized-cacao-beans": {
+      "monthly": 0.25,
+      "sample_size": 3
     }
   },
   "partners": {
@@ -128,9 +128,9 @@
           "sample_size_sales": 5,
           "restocks_30d": 0.0,
           "restocks_90d": 0.0,
-          "restocks_12m_monthly_avg": 1.167,
+          "restocks_12m_monthly_avg": 0.75,
           "last_restock_date": "2026-01-12",
-          "sample_size_restocks": 10
+          "sample_size_restocks": 9
         },
         "taste-of-rainforest-caramelized-cacao-beans": {
           "sales_30d": 0,
@@ -140,9 +140,9 @@
           "sample_size_sales": 0,
           "restocks_30d": 0.0,
           "restocks_90d": 0.0,
-          "restocks_12m_monthly_avg": 0.417,
+          "restocks_12m_monthly_avg": 0.0,
           "last_restock_date": "2025-11-14",
-          "sample_size_restocks": 1
+          "sample_size_restocks": 0
         }
       }
     },
@@ -232,12 +232,12 @@
       "partner_type": "Operator",
       "items": {
         "8-ounce-organic-cacao-nibs": {
-          "sales_30d": 1.0,
-          "sales_90d": 2.0,
-          "sales_12m_monthly_avg": 0.333,
-          "last_sale_date": "2026-11-06",
-          "sample_size_sales": 4,
-          "restocks_30d": 129.0,
+          "sales_30d": 3.0,
+          "sales_90d": 4.0,
+          "sales_12m_monthly_avg": 0.5,
+          "last_sale_date": "2026-11-14",
+          "sample_size_sales": 6,
+          "restocks_30d": 0.0,
           "restocks_90d": 129.0,
           "restocks_12m_monthly_avg": 12.5,
           "last_restock_date": "2026-10-14",
@@ -261,7 +261,7 @@
           "sales_12m_monthly_avg": 0.0,
           "last_sale_date": "2025-08-14",
           "sample_size_sales": 0,
-          "restocks_30d": 169.0,
+          "restocks_30d": 0.0,
           "restocks_90d": 169.0,
           "restocks_12m_monthly_avg": 14.083,
           "last_restock_date": "2026-10-14",
@@ -281,7 +281,7 @@
         },
         "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
           "sales_30d": 2.0,
-          "sales_90d": 14.0,
+          "sales_90d": 8.0,
           "sales_12m_monthly_avg": 1.167,
           "last_sale_date": "2026-11-06",
           "sample_size_sales": 14,
