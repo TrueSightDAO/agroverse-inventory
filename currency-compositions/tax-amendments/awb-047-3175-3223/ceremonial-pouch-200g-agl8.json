@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "document_type": "landed_cost_tax_amendment",
+  "generated_at": "2026-11-18",
+  "generated_by": "Sophia Truesight (admin+sophia@truesight.me)",
+  "event": "Brazilian federal import tax amortization onto landed unit cost",
+  "awb": "047-3175-3223",
+  "freight_lane": "Ilheus/Salvador, Bahia, Brazil -> San Francisco, CA, USA",
+  "currency": "Ceremonial Cacao Kraft Pouch - 20250219006 | Cacao Mass | 200 grams | Paulo 2024 | Santos 018-2025 016-2025 || Ilheus - AGL8 + 047-3175-3223 - San Francisco",
+  "currencies_sheet_row": 115,
+  "owner_ledger": "AGL8",
+  "tax_payment": {
+    "reference": "580850637",
+    "pix_id": "E68900810202611180719nZHppxy30K7",
+    "date": "2026-11-18T04:20:00-03:00",
+    "amount_brl": 674.37,
+    "payee_name": "MINISTERIO DA FAZENDA",
+    "payee_bank": "BCO DO BRASIL S.A.",
+    "payee_key_type": "EVP",
+    "payee_key": "8510caaa-296d-4c3f-89b9-0d98711ad2c92",
+    "payer_name": "Zhiwen Teh",
+    "payer_bank": "BCO RENDIMENTO S.A.",
+    "payer_document": "Brazilian federal import tax"
+  },
+  "funding": {
+    "usd_sent": 118.7,
+    "wise_fee_usd": 2.0,
+    "usd_effective": 116.7,
+    "brl_received": 674.37,
+    "implied_fx_brl_per_usd": 5.7786,
+    "memo": "Taxes to the inventory to usa",
+    "main_ledger_rows": [
+      "6094",
+      "6095"
+    ],
+    "event": "[CURRENCY CONVERSION EVENT]"
+  },
+  "allocation": {
+    "driver": "NF-e n.18 line weights (per-unit mass x units)",
+    "total_weight_kg": 297.056684,
+    "rate_usd_per_kg": 0.3928499293,
+    "declared_net_kg_ci_pl_rev15": 302.06,
+    "declared_gross_kg_awb": 349.0,
+    "note": "Allocated over 297.056684 kg of actual NF-e line weights (matches composition JSON total_output_weight_grams), NOT the 302.06 kg declared net, so every cent of the USD 116.70 is absorbed by a line. On the 302.06 kg basis the rate would be USD 0.386353/kg and USD 1.97 would be unallocated.",
+    "item_weight_kg": 33.8,
+    "item_units": 169,
+    "unit_weight_kg": 0.2,
+    "item_tax_share_usd": 13.27832761
+  },
+  "price_change": {
+    "unit_cost_before_usd": 13.78,
+    "unit_cost_after_usd": 13.85857,
+    "delta_per_unit_usd": 0.07857,
+    "delta_per_unit_formula": "0.2 kg x 0.3928499293 USD/kg",
+    "currency": "USD",
+    "not_retail_price": true
+  },
+  "current_holdings": {
+    "quantity": null,
+    "holder": null
+  },
+  "ledger_entries": {
+    "rows": [
+      "r218",
+      "r219",
+      "r220"
+    ],
+    "substrate": "AGL8 Transactions",
+    "pattern": "Gary Teh -17.20682690 Assets (expense) / TrueSight DAO +17.20682690 Equity / Gary Teh +17.20682690 Assets (injection)"
+  },
+  "upstream_composition": "https://raw.githubusercontent.com/TrueSightDAO/agroverse-inventory/main/currency-compositions/d8ca658e-9c16-4a9d-bef2-054c0dcdae82.json",
+  "upstream_composition_note": "d8ca658e is the pre-tax landed-cost revaluation for this AWB. It already embedded USD 5069.7158 of freight+landing = USD 17.0666/kg. That layer EXCLUDES the Brazilian federal tax documented here - per governor ruling 2026-11-18, the tax is additional and not a double-count.",
+  "caveats": [
+    "This is a BRAZIL-side federal tax (Ministerio da Fazenda). US CBP customs duty / formal-entry fees for this AWB are NOT included in this document.",
+    "Basis is 297.056684 kg of NF-e n.18 line weights, not the 302.06 kg declared net on CI/PL Rev 15.",
+    "unit_cost_after_usd is UNIT COST, not retail. Retail for these SKUs lives in the QR sheet Price column."
+  ],
+  "source_document_url": "https://raw.githubusercontent.com/TrueSightDAO/agroverse-inventory/main/currency-compositions/tax-amendments/awb-047-3175-3223/ceremonial-pouch-200g-agl8.json"
+}
