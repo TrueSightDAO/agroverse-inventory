@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T16:27:47.000Z",
+  "generatedAt": "2026-11-23T18:46:07.000Z",
   "source": "sync_partners_velocity",
   "windowsDays": [
     30,
@@ -10,22 +10,6 @@
     "oscar-bahia-ceremonial-cacao-200g": {
       "monthly": 0.75,
       "sample_size": 14
-    },
-    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
-      "monthly": 1.667,
-      "sample_size": 1
-    },
-    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
-      "monthly": 3.333,
-      "sample_size": 1
-    },
-    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
-      "monthly": 1.417,
-      "sample_size": 3
-    },
-    "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
-      "monthly": 2.5,
-      "sample_size": 1
     },
     "8-ounce-organic-cacao-nibs": {
       "monthly": 0.458,
@@ -38,6 +22,22 @@
     "taste-of-rainforest-caramelized-cacao-beans": {
       "monthly": 0.25,
       "sample_size": 3
+    },
+    "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
+      "monthly": 1.417,
+      "sample_size": 3
+    },
+    "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023": {
+      "monthly": 1.667,
+      "sample_size": 1
+    },
+    "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024": {
+      "monthly": 3.333,
+      "sample_size": 1
+    },
+    "organic-81-dark-chocolate-bar-50g-fazenda-sao-jorge-bahia-2024": {
+      "monthly": 2.5,
+      "sample_size": 1
     }
   },
   "partners": {
@@ -79,9 +79,9 @@
         "8-ounce-organic-cacao-nibs": {
           "sales_30d": 0.0,
           "sales_90d": 0.0,
-          "sales_12m_monthly_avg": 0.167,
+          "sales_12m_monthly_avg": 0.083,
           "last_sale_date": "2026-01-22",
-          "sample_size_sales": 2,
+          "sample_size_sales": 1,
           "restocks_30d": 0.0,
           "restocks_90d": 0.0,
           "restocks_12m_monthly_avg": 0.0,
@@ -378,7 +378,7 @@
       "partner_type": "Consignment",
       "items": {
         "ceremonial-cacao-fazenda-santa-ana-2023-200g": {
-          "sales_30d": 6.0,
+          "sales_30d": 0.0,
           "sales_90d": 6.0,
           "sales_12m_monthly_avg": 0.833,
           "last_sale_date": "2026-10-20",
