@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T18:28:47.503Z",
+  "generatedAt": "2026-11-27T23:28:51.563Z",
   "source": "update_store_inventory",
   "skus": [
     {
@@ -121,7 +121,7 @@
       "shipment": "AGL4",
       "farm": "Oscar's Farm, Bahia",
       "imagePath": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
-      "storeInventory": 36
+      "storeInventory": 34
     },
     {
       "productId": "organic-81-dark-chocolate-bar-50g-fazenda-santa-ana-bahia-2023",
@@ -165,7 +165,7 @@
       "shipment": "AGL13",
       "farm": "Vivi's Farm",
       "imagePath": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
-      "storeInventory": 39
+      "storeInventory": 38
     },
     {
       "productId": "cacao-mass-bar-500g-ilheus-2024",
