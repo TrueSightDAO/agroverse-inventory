@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T22:28:47.433Z",
+  "generatedAt": "2026-11-27T01:28:44.510Z",
   "source": "update_store_inventory",
   "skus": [
     {
@@ -11,7 +11,7 @@
       "shipment": "AGL8",
       "farm": "Paulo",
       "imagePath": "https://agroverse.shop/assets/images/products/la-do-sitio-farm.jpg",
-      "storeInventory": 169
+      "storeInventory": 170
     },
     {
       "productId": "taste-of-rainforest-caramelized-cacao-beans",
