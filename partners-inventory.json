@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T16:58:25.000Z",
+  "generatedAt": "2026-11-27T16:43:58.000Z",
   "source": "sync_agroverse_store_inventory",
   "partners": {
     "black-king-ilheus": {
@@ -17,20 +17,6 @@
           "farm": "Oscar",
           "imagePath": "https://agroverse.shop/assets/images/products/cacao-nibs.jpeg",
           "gtin": "860010660218"
-        },
-        {
-          "productId": "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g",
-          "inventory": 1,
-          "venueInventory": 1,
-          "onlineInventory": 169,
-          "availableOnline": true,
-          "productName": "Ceremonial Cacao \u2013 La do Sitio Farm, Par\u00e1 Brazil, 2024 (200g)",
-          "priceUsd": "$30.00",
-          "category": "retail",
-          "shipment": "AGL8",
-          "farm": "Paulo",
-          "imagePath": "https://agroverse.shop/assets/images/products/la-do-sitio-farm.jpg",
-          "gtin": "860010660232"
         }
       ]
     },
@@ -142,8 +128,8 @@
       "items": [
         {
           "productId": "8-ounce-organic-cacao-nibs",
-          "inventory": 131,
-          "venueInventory": 131,
+          "inventory": 112,
+          "venueInventory": 112,
           "onlineInventory": 132,
           "availableOnline": true,
           "productName": "Amazon Rainforest Regenerative 8 Ounce Organic Cacao Nibs",
@@ -169,9 +155,9 @@
         },
         {
           "productId": "ceremonial-cacao-paulo-s-la-do-sitio-farm-200g",
-          "inventory": 169,
-          "venueInventory": 169,
-          "onlineInventory": 169,
+          "inventory": 170,
+          "venueInventory": 170,
+          "onlineInventory": 170,
           "availableOnline": true,
           "productName": "Ceremonial Cacao \u2013 La do Sitio Farm, Par\u00e1 Brazil, 2024 (200g)",
           "priceUsd": "$30.00",
@@ -196,9 +182,9 @@
         },
         {
           "productId": "organic-81-dark-chocolate-bar-50g-oscar-bahia-2024",
-          "inventory": 40,
-          "venueInventory": 40,
-          "onlineInventory": 40,
+          "inventory": 1,
+          "venueInventory": 1,
+          "onlineInventory": 36,
           "availableOnline": true,
           "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Oscar's Farm, Bahia Brazil, 2024",
           "priceUsd": "10",
@@ -209,9 +195,9 @@
         },
         {
           "productId": "organic-81-dark-chocolate-bar-50g-vivi-jesus-do-deus-bahia-2025",
-          "inventory": 40,
-          "venueInventory": 40,
-          "onlineInventory": 40,
+          "inventory": 3,
+          "venueInventory": 3,
+          "onlineInventory": 39,
           "availableOnline": true,
           "productName": "81% Organic Dark Chocolate Bar (50g) \u2014 Vivi's Farm, Bahia Brazil, 2025",
           "priceUsd": "$10.00",
