@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-28T02:29:53.684Z",
+  "generatedAt": "2026-11-28T09:28:46.710Z",
   "source": "update_store_inventory",
   "skus": [
     {
@@ -165,7 +165,7 @@
       "shipment": "AGL13",
       "farm": "Vivi's Farm",
       "imagePath": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
-      "storeInventory": 35
+      "storeInventory": 33
     },
     {
       "productId": "cacao-mass-bar-500g-ilheus-2024",
